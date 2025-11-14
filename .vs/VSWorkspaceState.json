@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Aplicacion",
+    "\\Aplicacion\\Commands",
+    "\\Aplicacion\\Commands\\Handlers",
+    "\\Aplicacion\\Queries",
+    "\\Aplicacion\\Queries\\Handlers",
+    "\\MicroUsuarioApi"
+  ],
+  "SelectedNode": "\\Aplicacion\\Commands\\Handlers",
+  "PreviewInSolutionExplorer": false
+}
