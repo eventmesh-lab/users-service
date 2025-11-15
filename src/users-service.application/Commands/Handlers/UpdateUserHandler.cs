@@ -14,7 +14,6 @@ namespace Aplication.Commands.Handlers
 {
     public class UpdateUserHandler: IRequestHandler<UpdateUserCommand, bool>
     {
-        public readonly IMediator _mediator;
         public readonly IUserServices _userServices;
         public readonly IKeycloakRepository _usuarioKeycloakRepository;
         public UpdateUserHandler(IUserServices userServices, IKeycloakRepository usuarioKeycloakRepository)

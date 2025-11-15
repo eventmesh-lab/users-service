@@ -14,7 +14,6 @@ namespace Aplication.Commands.Handlers
 {
     public class ChangePasswordHandler : IRequestHandler<ChangePasswordCommand, bool>
     {
-        public readonly IMediator _mediator;
         public readonly IUserServices _userServices;
         public readonly IKeycloakRepository _usuarioKeycloakRepository;
         public ChangePasswordHandler(IUserServices userServices, IKeycloakRepository usuarioKeycloakRepository)

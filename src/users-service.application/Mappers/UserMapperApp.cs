@@ -41,18 +41,13 @@ namespace Aplication.Mappers
 
         public static User UpdateUserToDomain(UpdateUserDTO updateUserDTO, User user)
         {
+            var firstName = updateUserDTO.FirstName ?? user.FirstName;
+            var lastName = updateUserDTO.LastName ?? user.LastName;
+            var phone = updateUserDTO.PhoneNumber ?? user.PhoneNumber;
+            var address = updateUserDTO.Address ?? user.Address;
+            var birthdate = updateUserDTO.Birthdate ?? user.Birthdate;
 
-            return new User
-            {
-                Id = user.Id,
-                FirstName = updateUserDTO.FirstName ?? user.FirstName,
-                LastName = updateUserDTO.LastName ?? user.LastName,
-                Email = user.Email,
-                PhoneNumber = updateUserDTO.PhoneNumber ?? user.PhoneNumber,
-                Address = updateUserDTO.Address ?? user.Address,
-                Birthdate = updateUserDTO.Birthdate ?? user.Birthdate,
-                RoleUser = user.RoleUser
-            };
+            return new User(user.Id, firstName, lastName, user.Email, phone, address, birthdate, user.RoleUser);
         }
 
 

@@ -14,7 +14,6 @@ namespace Aplication.Commands.Handlers
 {
     public class CreateUserHandler : IRequestHandler<CreateUserCommand, CreateUserResponseDto>
     {
-        public readonly IMediator _mediator;
         public readonly IUserServices _userServices;
         public readonly IKeycloakRepository _usuarioKeycloakRepository;
         public CreateUserHandler(IUserServices userServices, IKeycloakRepository usuarioKeycloakRepository)

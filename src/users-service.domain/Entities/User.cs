@@ -1,4 +1,5 @@
 ﻿using Domain.ValueObjects;
+using System.Diagnostics.CodeAnalysis;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -21,6 +22,7 @@ namespace Domain.Entities0
 
         public User() { }
 
+        [SetsRequiredMembers]
         public User(Guid id,string firstName,string lastName,
          Email email,string phoneNumber, string address , DateTime birthdate, Role role)
         {
@@ -34,6 +36,7 @@ namespace Domain.Entities0
             RoleUser = role;
         }
 
+        [SetsRequiredMembers]
         public User(string firstName, string lastName, 
          Email email,  String phoneNumber, string address , DateTime birthdate, Role role)
         {
