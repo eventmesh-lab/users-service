@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Aplication.Queries.Queries
 {
-    public class GetUserEmailCommand: IRequest<GetUserResponseDto>
+    public class GetUserEmailQuery: IRequest<GetUserResponseDto>
     {
         public string Email { get; set; }
-        public GetUserEmailCommand(string email)
+        public GetUserEmailQuery(string email)
         {
             Email = email;
         }

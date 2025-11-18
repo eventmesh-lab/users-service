@@ -11,6 +11,7 @@ namespace Aplication.Interfaces
     {
         Task AddUserPostgres(User user, CancellationToken cancellationToken);
         Task<User?> GetUserByEmailServices(string email, CancellationToken cancellationToken);
+        Task<List<User>> GetAllUsersServices(CancellationToken cancellationToken);
         Task<bool> DeleteUserByEmailServices(string email, CancellationToken cancellationToken);
         Task<System.Net.HttpStatusCode> UpdateUserServices(string email, User newUser);
     }

@@ -2,9 +2,9 @@
 using FluentValidation;
 namespace Aplication.Validator
 {
-    public class UsuarioDTOValidator : AbstractValidator<UserCreateDTO>
+    public class UserDTOValidator : AbstractValidator<UserCreateDTO>
     {
-        public UsuarioDTOValidator()
+        public UserDTOValidator()
         {
             RuleFor(u => u.FirstName)
                 .NotEmpty().WithMessage(" El nombre es obligatorio.");
@@ -21,6 +21,7 @@ namespace Aplication.Validator
                 .MinimumLength(6).WithMessage("La contraseña debe tener al menos 6 caracteres.");
 
             RuleFor(u => u.PhoneNumber)
+                .NotEmpty().WithMessage("El telefono es obligatorio.")
                 .Matches(@"^\d{11}$").WithMessage(" El teléfono debe contener 11 dígitos.");
 
             RuleFor(u => u.Address)

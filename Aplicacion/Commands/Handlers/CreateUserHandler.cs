@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Aplication.Commands.Commands;
+﻿using Aplication.Commands.Commands;
 using Aplication.DTOs.DTOResponse;
 using Aplication.Interfaces;
 using Aplication.Mappers;
 using Domain.Entities0;
 using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Aplication.Commands.Handlers
 {

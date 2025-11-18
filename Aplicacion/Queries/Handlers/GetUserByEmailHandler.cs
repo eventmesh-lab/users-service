@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Aplication.Queries.Handlers
 {
-    public class GetUserByEmailHandler : IRequestHandler<GetUserEmailCommand, GetUserResponseDto>
+    public class GetUserByEmailHandler : IRequestHandler<GetUserEmailQuery, GetUserResponseDto>
     {
         public readonly IMediator _mediator;
         public readonly IUserServices _userServices;
@@ -19,7 +19,7 @@ namespace Aplication.Queries.Handlers
         {
             _userServices = userServices;
         }
-        public async Task<GetUserResponseDto> Handle(GetUserEmailCommand request, CancellationToken cancellationToken)
+        public async Task<GetUserResponseDto> Handle(GetUserEmailQuery request, CancellationToken cancellationToken)
         {
             var userRegistered = await _userServices.GetUserByEmailServices(request.Email, cancellationToken);
 

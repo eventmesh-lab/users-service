@@ -45,16 +45,29 @@ namespace Aplication.Mappers
             return new User
             {
                 Id = user.Id,
-                FirstName = updateUserDTO.FirstName ?? user.FirstName,
-                LastName = updateUserDTO.LastName ?? user.LastName,
-                Email = user.Email,
-                PhoneNumber = updateUserDTO.PhoneNumber ?? user.PhoneNumber,
-                Address = updateUserDTO.Address ?? user.Address,
+                FirstName = string.IsNullOrWhiteSpace(updateUserDTO.FirstName) ? user.FirstName : updateUserDTO.FirstName,
+                LastName = string.IsNullOrWhiteSpace(updateUserDTO.LastName) ? user.LastName : updateUserDTO.LastName,
+                Email = user.Email, 
+                PhoneNumber = string.IsNullOrWhiteSpace(updateUserDTO.PhoneNumber) ? user.PhoneNumber : updateUserDTO.PhoneNumber,
+                Address = string.IsNullOrWhiteSpace(updateUserDTO.Address) ? user.Address : updateUserDTO.Address,
                 Birthdate = updateUserDTO.Birthdate ?? user.Birthdate,
-                RoleUser = user.RoleUser
+                RoleUser = user.RoleUser 
             };
         }
 
+        public static List<GetUsersResponseDto> ToResponseGetList(List<User> users)
+        {
+            return users.Select( u => new GetUsersResponseDto
+            {
+                FirstName = u.FirstName,
+                LastName = u.LastName,
+                Email = u.Email.Value,
+                PhoneNumber = u.PhoneNumber,
+                Address = u.Address,
+                Birthdate = u.Birthdate.ToString(),
+                RoleUser = u.RoleUser.ToString()
+            }).ToList();
+        }
 
     }
 }

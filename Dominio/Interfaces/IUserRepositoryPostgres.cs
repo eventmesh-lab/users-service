@@ -12,6 +12,7 @@ namespace Domain.Interfaces
     {
         Task AddUser(User user, CancellationToken cancellationToken);
         Task<User?> GetUserByEmail(string email, CancellationToken cancellationToken);
+        Task<List<User>> GetAllUsersAsync(CancellationToken cancellationToken);
         Task<bool> DeleteUserByEmail(string email, CancellationToken cancellationToken);
         Task<HttpStatusCode> UpdateUser(string email, User userUpdated);
     }

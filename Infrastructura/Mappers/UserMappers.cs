@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.Entities0;
 using Domain.ValueObjects;
-using Insfrastructure.Persistence.Models;
+using Infrastructure.Persistence.Models;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
-namespace Insfrastructure.Mappers
+namespace Infrastructure.Mappers
 {
     public static class UserMappers
     {

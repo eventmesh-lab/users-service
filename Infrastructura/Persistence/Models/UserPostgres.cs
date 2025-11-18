@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Domain.ValueObjects;
 
-namespace Insfrastructure.Persistence.Models
+namespace Infrastructure.Persistence.Models
 {
     public class UserPostgres
     {
