@@ -8,9 +8,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore;
 using Domain.ValueObjects;
 using System.Data;
-using Insfrastructure.Persistence.Models;
+using Infrastructure.Persistence.Models;
 
-namespace Insfrastructure.Persistence.Configurations
+namespace Infrastructure.Persistence.Configurations
 {
     public class UserConfiguration : IEntityTypeConfiguration<UserPostgres>
     {

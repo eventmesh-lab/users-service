@@ -37,9 +37,11 @@ namespace Aplication.Commands.Handlers
                     $"{newUser.Birthdate}, {newUser.RoleUser}");
                 var result = await _userServices.UpdateUserServices(request.Email, newUser);
                 Console.WriteLine("Usuario actualizado en la base de datos Postgres.");
+
                 try
                 {
-                    if ( request.UpdateUserDTO.FirstName !=null ||  request.UpdateUserDTO.FirstName!= null) 
+                    if (!string.IsNullOrWhiteSpace(request.UpdateUserDTO.FirstName) ||!string.IsNullOrWhiteSpace(request.UpdateUserDTO.LastName)
+)
                     {
                         var userInKeyclaok = await _usuarioKeycloakRepository.UpdateUserInKeycloakAsyncRepo(request.Email, newUser.FirstName, newUser.LastName);
                         Console.WriteLine($"Keycloak: {userInKeyclaok}");

@@ -2,8 +2,8 @@ using Aplication.Commands.Commands;
 using Aplication.Interfaces;
 using Aplication.Queries.Queries;
 using Domain.Interfaces;
-using Insfrastructure.Persistence.Context;
-using Insfrastructure.Persistence.Repositories;
+using Infrastructure.Persistence.Context;
+using Infrastructure.Persistence.Repositories;
 using Insfrastructure.Services;
 using MicroserviciosUsuarios.Infrastructure.Repositories.Keycloak;
 using MicroservicioUsuarios.Infrastructure.ServicesInfrastracture;
@@ -46,7 +46,7 @@ builder.Services.AddHttpClient<KeycloakServiceInfrastracture>();
 // MediatR Configuration
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
     typeof(CreateUserCommand).Assembly ,
-    typeof(GetUserEmailCommand).Assembly,
+    typeof(GetUserEmailQuery).Assembly,
     typeof(ChangePasswordCommand).Assembly,
     typeof(UpdateUserCommand).Assembly
    /* typeof(UpdateRolePermissionCommand).Assembly)*/));

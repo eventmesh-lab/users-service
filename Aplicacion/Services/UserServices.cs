@@ -29,6 +29,10 @@ namespace Insfrastructure.Services
             return await _repositoryPostgres.GetUserByEmail(email, cancellationToken);
         }
 
+        public async Task<List<User>> GetAllUsersServices(CancellationToken cancellationToken)
+        {
+            return  await _repositoryPostgres.GetAllUsersAsync(cancellationToken);
+        }
         public async Task<bool> DeleteUserByEmailServices(string email, CancellationToken cancellationToken)
         {
             return await _repositoryPostgres.DeleteUserByEmail(email, cancellationToken);

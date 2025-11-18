@@ -2,10 +2,9 @@
 using Domain.Entities0;
 using Domain.Interfaces;
 using Domain.ValueObjects;
-using Infrastructure.Migrations;
-using Insfrastructure.Mappers;
-using Insfrastructure.Persistence.Context;
-using Insfrastructure.Persistence.Models;
+using Infrastructure.Mappers;
+using Infrastructure.Persistence.Context;
+using Infrastructure.Persistence.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -14,7 +13,7 @@ using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Insfrastructure.Persistence.Repositories
+namespace Infrastructure.Persistence.Repositories
 {
     public class UserRepositoyPostgres : IUserRepositoryPostgres
     {
@@ -42,7 +41,19 @@ namespace Insfrastructure.Persistence.Repositories
             }
             return UserMappers.ToDomain(userModel);
         }
-         public async Task<bool> DeleteUserByEmail(string email, CancellationToken cancellationToken)
+
+        public async Task<List<User>> GetAllUsersAsync(CancellationToken cancellationToken)
+        {
+            var userModels = await _context.Users.ToListAsync(cancellationToken);
+
+            var users = userModels
+                .Select(UserMappers.ToDomain)
+                .ToList();
+
+            return users;
+        }
+
+        public async Task<bool> DeleteUserByEmail(string email, CancellationToken cancellationToken)
         {
 
             var usuario = await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
