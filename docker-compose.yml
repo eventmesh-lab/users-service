@@ -1,0 +1,58 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: users-postgres
+    environment:
+      POSTGRES_DB: users-service
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:26.0
+    container_name: keycloak
+    ports:
+      - "8180:8080"
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    command: start-dev --import-realm
+    volumes:
+      - ./realm:/opt/keycloak/data/import
+      - keycloak_data:/opt/keycloak/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: users-api
+    ports:
+      - "7181:7181"
+    environment:
+      - ASPNETCORE_URLS=http://+:7181
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__ConnectionPostgre=Host=postgres;Port=5432;Database=users-service;Username=postgres;Password=postgres
+      - Keycloak__BaseUrl=http://keycloak:8080
+    volumes:
+      - api_data:/app/data
+    depends_on:
+      postgres:
+        condition: service_healthy
+      keycloak:
+        condition: service_started
+
+volumes:
+  postgres_data:
+  keycloak_data:
+  api_data:
