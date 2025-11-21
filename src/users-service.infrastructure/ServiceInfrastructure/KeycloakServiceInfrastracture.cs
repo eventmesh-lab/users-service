@@ -173,7 +173,7 @@ namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
         {
             var userId = await GetUserIdByUsernameAsync(email);
             var accessToken = await GetAdminTokenAsync();
-            var url = $"http://localhost:8180/admin/realms/{_config["Keycloak:UserRealm"]}/users/{userId}/reset-password";
+            var url = $"http://keycloak:8080/admin/realms/{_config["Keycloak:UserRealm"]}/users/{userId}/reset-password";
 
             var payload = new
             {
@@ -204,7 +204,7 @@ namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
         {
             var accessToken = await GetAdminTokenAsync();
             var realm = _config["Keycloak:UserRealm"];
-            var url = $"http://localhost:8180/admin/realms/{realm}/users?username={username}";
+            var url = $"http://keycloak:8080/admin/realms/{realm}/users?username={username}";
 
             _httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
             var response = await _httpClient.GetAsync(url);
@@ -227,7 +227,7 @@ namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
             using var httpClient = new HttpClient();
             var tokenAdmin = await GetAdminTokenAsync();
             var userId = await GetUserIdByUsernameAsync(oldEmail);
-            var baseUrl = "http://localhost:8180";
+            var baseUrl = "http://keycloak:8080";
             string url = $"{baseUrl}/admin/realms/{_config["Keycloak:UserRealm"]}/users/{userId}";
             var body = new
             {

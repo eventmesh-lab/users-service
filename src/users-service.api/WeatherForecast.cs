@@ -1,4 +1,4 @@
-namespace MicroUsuarioApi
+namespace users_service.api
 {
     public class WeatherForecast
     {

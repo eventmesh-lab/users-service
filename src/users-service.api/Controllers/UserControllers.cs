@@ -10,7 +10,7 @@ using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
-namespace MicroUsuarioApi.Controllers
+namespace users_service.api.Controllers
 {
     [ApiController]
     [Route("api/users")]

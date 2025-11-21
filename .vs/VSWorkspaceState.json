@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\realm",
+    "\\src",
+    "\\src\\users-service.api",
+    "\\src\\users-service.api\\Controllers",
+    "\\src\\users-service.application",
+    "\\src\\users-service.application\\Commands",
+    "\\src\\users-service.application\\Commands\\Handlers",
+    "\\src\\users-service.infrastructure",
+    "\\src\\users-service.infrastructure\\ServiceInfrastructure"
+  ],
+  "SelectedNode": "\\src\\users-service.api\\appsettings.json",
+  "PreviewInSolutionExplorer": false
+}

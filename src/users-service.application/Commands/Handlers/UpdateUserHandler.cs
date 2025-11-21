@@ -50,6 +50,7 @@ namespace users_service.application.Commands.Handlers
                 }
                 catch (Exception ex)
                 {
+                    await _userServices.UpdateUserServices(request.Email, oldUser);
                     throw new ApplicationException($"No se pudo actualizar el usuario en keyclaok", ex);
                 }
 
