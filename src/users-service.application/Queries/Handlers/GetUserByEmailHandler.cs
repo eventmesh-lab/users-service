@@ -13,9 +13,8 @@ namespace users_service.application.Queries.Handlers
 {
     public class GetUserByEmailHandler : IRequestHandler<GetUserEmailQuery, GetUserResponseDto>
     {
-        public readonly IMediator _mediator;
         public readonly IUserServices _userServices;
-        public GetUserByEmailHandler(IUserServices userServices, IKeycloakRepository usuarioKeycloakRepository)
+        public GetUserByEmailHandler(IUserServices userServices)
         {
             _userServices = userServices;
         }

@@ -33,7 +33,5 @@ namespace users_service.domain.ValueObjects
 
         public override string ToString() => Value;
 
-        public override int GetHashCode() =>
-            Value.ToLowerInvariant().GetHashCode();
     }
 }

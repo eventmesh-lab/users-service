@@ -27,9 +27,6 @@ namespace users_service.api.Controllers
         {
             try
             {
-                Console.WriteLine("Llegó al controlador");
-                Console.WriteLine($"Request Data: {request.FirstName}, {request.LastName}, {request.Email}, {request.PhoneNumber}, {request.Address}, " +
-                    $"{request.Birthdate}, {request.RoleUser}");
 
                 var validator = new UserDTOValidator();
                 var resultado = validator.Validate(request);
@@ -43,14 +40,9 @@ namespace users_service.api.Controllers
                 var response = await _mediator.Send(command, cancellationToken);
                 return Ok(new { Usuario = response, Mensaje = "Usuario registrado exitosamente." });
             }
-            catch (ApplicationException ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
             catch (Exception ex)
             {
-                // Para errores inesperados
-                return StatusCode(500, new { message = "Error interno del servidor", detail = ex.Message });
+                return StatusCode(500, new { message =  ex.Message });
             }
         }
 
@@ -58,7 +50,6 @@ namespace users_service.api.Controllers
         [HttpGet("getUser/{email}")]
         public async Task<IActionResult> GetUser(string email, CancellationToken cancellationToken)
         {
-            Console.WriteLine("Llegó al controlador");
             if (email == null || string.IsNullOrWhiteSpace(email))
             {
                 throw new Exception("El email no puede estar vacío.");
@@ -73,8 +64,6 @@ namespace users_service.api.Controllers
 
         public async Task<IActionResult> ChangePassword(string email, [FromBody] ChangePasswordDTO changePasswordDTO, CancellationToken cancellationToken)
         {
-            Console.WriteLine("Llegó al controlador para cambiar la contraseña");
-
             try
             {
 
@@ -94,21 +83,15 @@ namespace users_service.api.Controllers
                 var response = await _mediator.Send(new ChangePasswordCommand(email, changePasswordDTO));
                 return response ? Ok("Contraseña cambiada exitosamente.") : BadRequest(" Token inválido o expirado.");
             }
-            catch (ApplicationException ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
             catch (Exception ex)
             {
-                // Para errores inesperados
-                return StatusCode(500, new { message = "Error interno del servidor", detail = ex.Message });
+                return StatusCode(500, new { message = ex.Message });
             }
         }
 
         [HttpPut("updateUser/{email}")]
         public async Task<IActionResult> UpdateUser(string email, [FromBody] UpdateUserDTO updateUserDTO, CancellationToken cancellationToken)
         {
-            Console.WriteLine("Llegó al controlador para actualizar el usuario");
              var validator = new UpdateUserDTOValidator();
              var resultado = validator.Validate(updateUserDTO);
              if (!resultado.IsValid)

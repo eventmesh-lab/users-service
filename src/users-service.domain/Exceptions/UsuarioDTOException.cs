@@ -9,7 +9,7 @@ namespace users_service.domain.Exceptions
     public class UsuarioDTOException : Exception
     {
         public UsuarioDTOException(Exception innerException)
-        : base($"Los datos ingresados no son válidos. Detalle: {innerException.Message}", innerException)
+        : base($"Los datos ingresados no son válidos. {innerException.Message}", innerException)
         {
         }
 
