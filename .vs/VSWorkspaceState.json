@@ -1,16 +1,17 @@
 {
   "ExpandedNodes": [
     "",
-    "\\realm",
     "\\src",
     "\\src\\users-service.api",
-    "\\src\\users-service.api\\Controllers",
-    "\\src\\users-service.application",
-    "\\src\\users-service.application\\Commands",
-    "\\src\\users-service.application\\Commands\\Handlers",
+    "\\src\\users-service.domain",
+    "\\src\\users-service.domain\\Interfaces",
     "\\src\\users-service.infrastructure",
-    "\\src\\users-service.infrastructure\\ServiceInfrastructure"
+    "\\src\\users-service.infrastructure\\ServiceInfrastructure",
+    "\\tests",
+    "\\tests\\users-service.application.Tests",
+    "\\tests\\users-service.application.Tests\\Commands",
+    "\\tests\\users-service.application.Tests\\Commands\\Handlers"
   ],
-  "SelectedNode": "\\src\\users-service.api\\appsettings.json",
+  "SelectedNode": "\\src\\users-service.api\\Program.cs",
   "PreviewInSolutionExplorer": false
 }

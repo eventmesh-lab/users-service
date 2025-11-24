@@ -1,13 +1,14 @@
-﻿using users_service.application.DTOs;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using System;
 using System.Net.Http.Headers;
 using System.Text;
 using System.Text.Json;
+using users_service.application.DTOs;
+using users_service.domain.Interfaces;
 namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
 {
 
-    public class KeycloakServiceInfrastracture
+    public class KeycloakServiceInfrastracture : IKeycloakServiceInfrastructure
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;

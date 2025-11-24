@@ -13,7 +13,6 @@ namespace users_service.application.Queries.Handlers
 {
     public class GetUsersHandler : IRequestHandler<GetUsersQuery, List<GetUsersResponseDto>>
     {
-        public readonly IMediator _mediator;
         public readonly IUserServices _userServices;
         public GetUsersHandler(IUserServices userServices)
         {

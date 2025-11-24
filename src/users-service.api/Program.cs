@@ -41,6 +41,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 builder.Services.AddScoped<IUserRepositoryPostgres,UserRepositoyPostgres>();
 builder.Services.AddScoped<IUserServices, UserServices>();
 builder.Services.AddScoped<IKeycloakRepository, KeycloakRepository>();
+builder.Services.AddScoped<IKeycloakServiceInfrastructure, KeycloakServiceInfrastracture>();
 builder.Services.AddHttpClient<KeycloakServiceInfrastracture>();
 
 // MediatR Configuration

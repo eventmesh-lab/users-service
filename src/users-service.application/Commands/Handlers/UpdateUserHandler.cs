@@ -29,14 +29,11 @@ namespace users_service.application.Commands.Handlers
             {
                 throw new ApplicationException($"El usuario con email {request.Email} no existe en la base de datos.");
             }
+
             try
             {
-                Console.WriteLine("Actualizando usuario en la base de datos Postgres.");
                 var newUser = UserMapperApp.UpdateUserToDomain(request.UpdateUserDTO, oldUser);
-                Console.WriteLine($"Nuevo usuario mapeado: {newUser.FirstName}, {newUser.LastName}, {newUser.Email}, {newUser.PhoneNumber}, {newUser.Address}, " +
-                    $"{newUser.Birthdate}, {newUser.RoleUser}");
                 var result = await _userServices.UpdateUserServices(request.Email, newUser);
-                Console.WriteLine("Usuario actualizado en la base de datos Postgres.");
 
                 try
                 {
@@ -44,7 +41,6 @@ namespace users_service.application.Commands.Handlers
 )
                     {
                         var userInKeyclaok = await _usuarioKeycloakRepository.UpdateUserInKeycloakAsyncRepo(request.Email, newUser.FirstName, newUser.LastName);
-                        Console.WriteLine($"Keycloak: {userInKeyclaok}");
                     }
                     return result == System.Net.HttpStatusCode.OK;
                 }

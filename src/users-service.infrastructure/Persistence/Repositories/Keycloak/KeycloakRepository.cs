@@ -1,19 +1,20 @@
-﻿using users_service.application.Interfaces;
-using MicroserviciosUsuarios.Infrastructure.Repositories.Keycloak;
+﻿using MicroserviciosUsuarios.Infrastructure.Repositories.Keycloak;
 using MicroservicioUsuarios.Infrastructure.ServicesInfrastracture;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 
 namespace MicroserviciosUsuarios.Infrastructure.Repositories.Keycloak
 {
 
     public class KeycloakRepository : IKeycloakRepository
     {
-        private readonly KeycloakServiceInfrastracture _authService;
+        private readonly IKeycloakServiceInfrastructure _authService;
 
-        public KeycloakRepository(KeycloakServiceInfrastracture authService)
+        public KeycloakRepository(IKeycloakServiceInfrastructure authService)
         {
             _authService = authService;
         }
@@ -23,17 +24,6 @@ namespace MicroserviciosUsuarios.Infrastructure.Repositories.Keycloak
 
             await _authService.CreateUserAsync(email, name,lastname, password);
             return true;
-            /*
-            try
-            {
-                await _authService.CreateUserAsync(email, name, password);
-                return true; 
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($" Error al registrar usuario en Keycloak: {ex.Message}");
-                return false; 
-            }*/
         }
 
         public async Task<bool> AssignRealmRoleToUserAsyncRepo(string email, string rol) {
