@@ -44,6 +44,13 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - ConnectionStrings__ConnectionPostgre=Host=postgres;Port=5432;Database=users-service;Username=postgres;Password=postgres
       - Keycloak__BaseUrl=http://keycloak:8080
+      - Keycloak__AdmRealm=master
+      - Keycloak__UserRealm=myrealm
+      - Keycloak__AdmClientId=admin-cli
+      - Keycloak__UserClientId=aspnetcore
+      - Keycloak__ClientSecret=PzaioIxlVKVINnJ7VJwCILdBoUlUWB05
+      - Cors__AllowedOrigins__0=http://localhost:3000
+      - Cors__AllowedOrigins__1=http://localhost:7181
     volumes:
       - api_data:/app/data
     depends_on:

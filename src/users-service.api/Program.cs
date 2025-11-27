@@ -15,11 +15,14 @@ using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// CORS configuration: allow configurable origins via configuration or fall back to common localhost ports
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost3000", policy =>
+    options.AddPolicy("DefaultCors", policy =>
     {
-        policy.WithOrigins("http://localhost:3000")
+        var configuredOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()
+            ?? new[] { "http://localhost:3000", "http://localhost:7181" };
+        policy.WithOrigins(configuredOrigins)
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
@@ -56,9 +59,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddHealthChecks();
 
 var app = builder.Build();
-app.UseCors("AllowLocalhost3000");
+app.UseCors("DefaultCors");
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -79,13 +83,15 @@ using (var scope = app.Services.CreateScope())
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "Ocurrió un error al aplicar las migraciones a la base de datos.");
+        logger.LogError(ex, "Ocurriï¿½ un error al aplicar las migraciones a la base de datos.");
     }
 }
-app.UseHttpsRedirection();
+// In container we serve HTTP only; avoid forced HTTPS redirection
+// Remove HTTPS redirection to prevent 307/308 loops when only HTTP is exposed
 
 app.UseAuthorization();
 
 app.MapControllers();
+app.MapHealthChecks("/health");
 
 app.Run();
