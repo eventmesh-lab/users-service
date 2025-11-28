@@ -28,6 +28,12 @@ services:
     volumes:
       - ./realm:/opt/keycloak/data/import
       - keycloak_data:/opt/keycloak/data
+    healthcheck:
+      test: ["CMD-SHELL", "/opt/keycloak/bin/kc.sh health --check-ready || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 60s
     depends_on:
       postgres:
         condition: service_healthy
