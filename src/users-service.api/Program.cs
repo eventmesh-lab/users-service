@@ -64,7 +64,8 @@ builder.Services.AddHealthChecks();
 var app = builder.Build();
 app.UseCors("DefaultCors");
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// Habilitar Swagger en Development y Production
+if (app.Environment.IsDevelopment() || !app.Environment.IsProduction() || Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != "Staging")
 {
     app.UseSwagger();
     app.UseSwaggerUI();
@@ -76,9 +77,27 @@ using (var scope = app.Services.CreateScope())
     try
     {
         // Obtiene el DbContext
-        var context = services.GetRequiredService<AppDbContext>(); 
-
-        context.Database.Migrate();
+        var context = services.GetRequiredService<AppDbContext>();
+        
+        // Reintentos para conectar a la BD
+        int maxRetries = 5;
+        int retryCount = 0;
+        
+        while (retryCount < maxRetries)
+        {
+            try
+            {
+                context.Database.Migrate();
+                break;
+            }
+            catch (Exception ex) when (retryCount < maxRetries - 1)
+            {
+                retryCount++;
+                var logger = services.GetRequiredService<ILogger<Program>>();
+                logger.LogWarning($"Intento {retryCount}/{maxRetries} - Error conectando a la BD: {ex.Message}. Reintentando en 5 segundos...");
+                System.Threading.Thread.Sleep(5000);
+            }
+        }
     }
     catch (Exception ex)
     {
