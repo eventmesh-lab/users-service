@@ -1,0 +1,105 @@
+apiVersion: 2019-12-01
+location: eastus
+name: usuarios-stack-deployment-v2
+properties:
+  containers:
+  # Contenedor PostgreSQL
+  - name: postgres
+    properties:
+      image: acruserproyectods.azurecr.io/postgres:16
+      resources:
+        requests:
+          cpu: 0.5
+          memoryInGb: 1.0
+      ports:
+      - port: 5432
+        protocol: TCP
+      environmentVariables:
+      - name: POSTGRES_USER
+        value: ${POSTGRES_USER}
+      - name: POSTGRES_PASSWORD
+        secureValue: ${POSTGRES_PASSWORD}
+      - name: POSTGRES_DB
+        value: ${POSTGRES_DB}
+
+  # Contenedor Keycloak con Realm
+  - name: keycloak
+    properties:
+      image: acruserproyectods.azurecr.io/keycloak:26.0
+      resources:
+        requests:
+          cpu: 1.0
+          memoryInGb: 2.0
+      ports:
+      - port: 8080
+        protocol: TCP
+      environmentVariables:
+      - name: KEYCLOAK_ADMIN
+        value: ${KEYCLOAK_ADMIN}
+      - name: KEYCLOAK_ADMIN_PASSWORD
+        secureValue: ${KEYCLOAK_ADMIN_PASSWORD}
+      - name: KC_DB
+        value: ${KC_DB}
+      - name: KC_DB_URL
+        value: jdbc:postgresql://127.0.0.1:5432/keycloak
+      - name: KC_DB_USERNAME
+        value: ${KC_DB_USERNAME}
+      - name: KC_DB_PASSWORD
+        secureValue: ${KC_DB_PASSWORD}
+      - name: KC_PROXY
+        value: edge
+      command:
+      - /opt/keycloak/bin/kc.sh
+      - start-dev
+      - --import-realm
+
+  # Contenedor API usuarios-service
+  - name: users-api
+    properties:
+      image: acruserproyectods.azurecr.io/users-service-api:v3
+      resources:
+        requests:
+          cpu: 1.0
+          memoryInGb: 1.5
+      ports:
+      - port: 7181
+        protocol: TCP
+      environmentVariables:
+      - name: ConnectionStrings__DefaultConnection
+        value: ${ConnectionStrings__DefaultConnection}
+      - name: Keycloak__ServerUrl
+        value: ${Keycloak__ServerUrl}
+      - name: Keycloak__Realm
+        value: ${Keycloak__Realm}
+      - name: Keycloak__ClientId
+        value: ${Keycloak__ClientId}
+      - name: Keycloak__ClientSecret
+        secureValue: ${Keycloak__ClientSecret}
+      - name: ASPNETCORE_URLS
+        value: ${ASPNETCORE_URLS}
+
+  # Configuración de imagen registry
+  imageRegistryCredentials:
+  - server: ${REGISTRY_SERVER}
+    username: ${REGISTRY_USERNAME}
+    password: ${REGISTRY_PASSWORD}
+
+  # Configuración de puertos expuestos
+  ipAddress:
+    type: Public
+    ports:
+    - protocol: TCP
+      port: 7181
+    - protocol: TCP
+      port: 8080
+    - protocol: TCP
+      port: 5432
+    dnsNameLabel: usuarios-service-stack
+
+  # Configuración del contenedor
+  osType: Linux
+  restartPolicy: OnFailure
+
+tags:
+  environment: development
+  project: usuarios-service
