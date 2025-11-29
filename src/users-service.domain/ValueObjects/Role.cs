@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace users_service.domain.ValueObjects
 {
-
+    /// Value Object que representa el rol de un usuario.
     public class Role
     {
         public string Valor { get; }
@@ -18,6 +18,8 @@ namespace users_service.domain.ValueObjects
             Valor = valor;
         }
 
+        /// Crea una nueva instancia de DuracionEvento.
+        /// Valores administrados: Usuario, Organizador, Administrador, Soporte.
         public static Role CrearDesdeTexto(string texto)
         {
             if (!Enum.TryParse<Rol>(texto, out var rol))

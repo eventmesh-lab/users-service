@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace users_service.application.DTOs
 {
+    /// DTO de entrada para actualizar los datos de un usuario.
     public class UpdateUserDTO
     {
         public string? FirstName { get; set; }

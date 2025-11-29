@@ -13,27 +13,32 @@ using System.Threading.Tasks;
 
 namespace users_service.application.Commands.Handlers
 {
+    /// Handler para el comando CreateUserCommand.
     public class CreateUserHandler : IRequestHandler<CreateUserCommand, CreateUserResponseDto>
     {
         public readonly IMediator _mediator;
         public readonly IUserServices _userServices;
         public readonly IKeycloakRepository _usuarioKeycloakRepository;
+        /// Inicializa una nueva instancia del handler.
         public CreateUserHandler(IUserServices userServices, IKeycloakRepository usuarioKeycloakRepository)
         {
             _userServices = userServices;
             _usuarioKeycloakRepository = usuarioKeycloakRepository;
         }
+        /// Maneja el comando CrearEventoCommand.
         public async Task<CreateUserResponseDto> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
-
+            // Mapear comando a entidades del dominio
             var user = UserMapperApp.ToDomain(request);
-            
-            if(_userServices.GetUserByEmailServices(request.UserCreateDTO.Email, cancellationToken).Result != null)
+
+            // Valida que no exista un usuario con el mismo email
+            if (_userServices.GetUserByEmailServices(request.UserCreateDTO.Email, cancellationToken).Result != null)
             {
                 throw new ApplicationException($"El usuario con email {user.Email} ya existe en la base de datos.");
             }
             try
             {
+                // Persistir el usuario en postgres
                 await _userServices.AddUserPostgres(user, cancellationToken);
             }
             catch (Exception ex)
@@ -44,17 +49,20 @@ namespace users_service.application.Commands.Handlers
             Console.WriteLine("Usuario agregado a la base de datos Postgres.");
             try
             {
+                // Persistir el usuario en keycloak
                 await _usuarioKeycloakRepository.RegisterUserAsyncRepo(request.UserCreateDTO.Email, request.UserCreateDTO.FirstName,
                                                                     request.UserCreateDTO.LastName, request.UserCreateDTO.Password);
             }
             catch (Exception ex)
             {
+                // Si falla el registro en keycloak, eliminar el usuario de postgres
                 await _userServices.DeleteUserByEmailServices(request.UserCreateDTO.Email, cancellationToken);
                 throw new ApplicationException($"No se pudo registar el usuario en keycloak", ex);
             }
             Console.WriteLine("Usuario registrado en Keycloak.");
             try
             {
+                // Persistir rol al usuario en keycloak
                 await _usuarioKeycloakRepository.AssignRealmRoleToUserAsyncRepo(
                     request.UserCreateDTO.Email,
                     request.UserCreateDTO.RoleUser

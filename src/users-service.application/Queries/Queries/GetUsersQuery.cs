@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace users_service.application.Queries.Queries
 {
+    /// Comando para consultar todos los usuarios existentes.
     public class GetUsersQuery : IRequest<List<GetUsersResponseDto>>
     {
     }

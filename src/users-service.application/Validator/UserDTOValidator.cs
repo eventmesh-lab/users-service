@@ -2,6 +2,7 @@
 using FluentValidation;
 namespace users_service.application.Validator
 {
+    /// Validador para el DTO de creación de usuario.
     public class UserDTOValidator : AbstractValidator<UserCreateDTO>
     {
         public UserDTOValidator()
@@ -35,6 +36,7 @@ namespace users_service.application.Validator
             RuleFor(u => u.RoleUser)
                  .NotEmpty().WithMessage("El Rol es obligatorio.");
         }
+        // Calcula la edad basada en la fecha de nacimiento.
         private int CalculateAge(DateTime birthdate)
         {
             var today = DateTime.Today;
