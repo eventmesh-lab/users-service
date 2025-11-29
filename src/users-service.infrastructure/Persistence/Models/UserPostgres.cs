@@ -7,6 +7,7 @@ using users_service.domain.ValueObjects;
 
 namespace users_service.infrastructure.Persistence.Models
 {
+    /// Modelo de datos que representa un usuario en la base de datos PostgreSQL.
     public class UserPostgres
     {
         public Guid Id { get; set; }

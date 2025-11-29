@@ -15,15 +15,18 @@ using System.Threading.Tasks;
 
 namespace users_service.infrastructure.Persistence.Repositories
 {
+    /// Implementacion del repositorio de postgresql para la persistencia de usuario.
     public class UserRepositoyPostgres : IUserRepositoryPostgres
     {
         public readonly AppDbContext _context;
 
+        /// Inicializa una nueva instancia del repositorio con el contexto de la base de datos proporcionado.
         public UserRepositoyPostgres(AppDbContext context)
         {
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
+        /// Agrega un nuevo usuario al repositorio.
         public async Task AddUser(User user, CancellationToken cancellationToken)
         {
             var model = UserMappers.ToModel(user);
@@ -31,6 +34,7 @@ namespace users_service.infrastructure.Persistence.Repositories
             await _context.SaveChangesAsync(cancellationToken);
         }
 
+        /// Obtiene un usuario por su email.
         public async Task<User?> GetUserByEmail(string email, CancellationToken cancellationToken)
         {
             var userModel = await _context.Users
@@ -42,6 +46,7 @@ namespace users_service.infrastructure.Persistence.Repositories
             return UserMappers.ToDomain(userModel);
         }
 
+        /// Obtiene todos los usuario existentes en el repositorio.
         public async Task<List<User>> GetAllUsersAsync(CancellationToken cancellationToken)
         {
             var userModels = await _context.Users.ToListAsync(cancellationToken);
@@ -53,6 +58,7 @@ namespace users_service.infrastructure.Persistence.Repositories
             return users;
         }
 
+        /// Elimina un usuario existente en el repositorio.
         public async Task<bool> DeleteUserByEmail(string email, CancellationToken cancellationToken)
         {
 
@@ -75,7 +81,9 @@ namespace users_service.infrastructure.Persistence.Repositories
             return false;
 
          }
-         public async Task<HttpStatusCode> UpdateUser(string email, User newUser)
+
+        /// Actualiza un usuario existente en el repositorio.
+        public async Task<HttpStatusCode> UpdateUser(string email, User newUser)
          {
             var userUpdated = UserMappers.ToModel(newUser);
             var user = await _context.Set<UserPostgres>()

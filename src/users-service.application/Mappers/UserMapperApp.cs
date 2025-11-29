@@ -16,8 +16,10 @@ using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace users_service.application.Mappers
 {
+    /// Clase para mapear entre diferentes representaciones de usuario.
     public class UserMapperApp
     {
+        /// Mapea un CreateUserCommand a la entidad de dominio User.
         public static User ToDomain(CreateUserCommand request)
         {
             
@@ -27,18 +29,18 @@ namespace users_service.application.Mappers
             return new User(request.UserCreateDTO.FirstName, request.UserCreateDTO.LastName, 
                 email, request.UserCreateDTO.PhoneNumber, request.UserCreateDTO.Address, request.UserCreateDTO.Birthdate, role );
         }
-
+        /// Mapea una entidad de dominio User a un CreateUserResponseDto.
         public static CreateUserResponseDto ToDto(User user)
         {
 
             return new CreateUserResponseDto(user.FirstName, user.LastName, user.Email.Value);
         }
-
+        /// Mapea una entidad de dominio User a un GetUserResponseDto.
         public static GetUserResponseDto ToGetUserDto(User user)
         {
             return new GetUserResponseDto(user.FirstName, user.LastName, user.Email.Value, user.PhoneNumber, user.Address, user.Birthdate);
         }
-
+        /// Mapea un UpdateUserDTO y una entidad de dominio User existente a una nueva entidad de dominio User actualizada.
         public static User UpdateUserToDomain(UpdateUserDTO updateUserDTO, User user)
         {
 
@@ -54,7 +56,7 @@ namespace users_service.application.Mappers
                 RoleUser = user.RoleUser 
             };
         }
-
+        /// Mapea una lista de entidades de dominio User a una lista de GetUsersResponseDto.
         public static List<GetUsersResponseDto> ToResponseGetList(List<User> users)
         {
             return users.Select( u => new GetUsersResponseDto

@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace users_service.application.Validator
 {
+    //Validador para el DTO de cambio de contraseña
     public class ChangePasswordValidator : AbstractValidator<ChangePasswordDTO>
     {
         public ChangePasswordValidator()

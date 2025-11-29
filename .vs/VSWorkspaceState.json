@@ -1,17 +1,16 @@
 {
   "ExpandedNodes": [
     "",
+    "\\realm",
     "\\src",
     "\\src\\users-service.api",
-    "\\src\\users-service.domain",
-    "\\src\\users-service.domain\\Interfaces",
+    "\\src\\users-service.api\\Controllers",
+    "\\src\\users-service.application",
+    "\\src\\users-service.application\\Validator",
+    "\\src\\users-service.domain\\ValueObjects",
     "\\src\\users-service.infrastructure",
-    "\\src\\users-service.infrastructure\\ServiceInfrastructure",
-    "\\tests",
-    "\\tests\\users-service.application.Tests",
-    "\\tests\\users-service.application.Tests\\Commands",
-    "\\tests\\users-service.application.Tests\\Commands\\Handlers"
+    "\\src\\users-service.infrastructure\\ServiceInfrastructure"
   ],
-  "SelectedNode": "\\src\\users-service.api\\Program.cs",
+  "SelectedNode": "\\src\\users-service.application\\Validator\\UpdateUserDTOValidator.cs",
   "PreviewInSolutionExplorer": false
 }

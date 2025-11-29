@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace users_service.domain.Enumerables
 {
+    /// Enumrable que representa las opciones aceptadas para el rol de un usuario.
     public enum Rol
     {
         Usuario,

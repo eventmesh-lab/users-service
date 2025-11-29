@@ -11,13 +11,16 @@ using System.Threading.Tasks;
 
 namespace users_service.application.Queries.Handlers
 {
+    /// Handler para el comando GetUsersQuery.
     public class GetUsersHandler : IRequestHandler<GetUsersQuery, List<GetUsersResponseDto>>
     {
         public readonly IUserServices _userServices;
+        /// Inicializa una nueva instancia del handler.
         public GetUsersHandler(IUserServices userServices)
         {
             _userServices = userServices;
         }
+        /// Maneja el comando GetUsersQuery.
         public async Task<List<GetUsersResponseDto>> Handle(GetUsersQuery request, CancellationToken cancellationToken)
         {
             var usersRegistered = await _userServices.GetAllUsersServices( cancellationToken);

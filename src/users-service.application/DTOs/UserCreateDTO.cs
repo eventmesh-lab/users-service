@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace users_service.application.DTOs
 {
+    /// DTO de entrada para registrar un usuario.
     public class UserCreateDTO
     {
         public string FirstName { get; set; }
