@@ -10,6 +10,7 @@ using users_service.domain.Interfaces;
 namespace MicroserviciosUsuarios.Infrastructure.Repositories.Keycloak
 {
 
+    /// Implementación del repositorio de Keycloak.
     public class KeycloakRepository : IKeycloakRepository
     {
         private readonly IKeycloakServiceInfrastructure _authService;
@@ -19,6 +20,7 @@ namespace MicroserviciosUsuarios.Infrastructure.Repositories.Keycloak
             _authService = authService;
         }
 
+        /// Registra un nuevo usuario en Keycloak.
         public async Task<bool> RegisterUserAsyncRepo(string email, string name, string lastname,string password)
         {
 
@@ -26,21 +28,25 @@ namespace MicroserviciosUsuarios.Infrastructure.Repositories.Keycloak
             return true;
         }
 
+        /// Asigna un rol de realm a un usuario en Keycloak.
         public async Task<bool> AssignRealmRoleToUserAsyncRepo(string email, string rol) {
             await _authService.AssignRealmRoleToUserAsync(email, rol);
             return true;
         }
 
+        /// Cambia la contraseña de un usuario en Keycloak.
         public async Task ChangePasswordAsyncRepo(string email, string newPassword)
         {
             await _authService.ChangePasswordAsync(email, newPassword);
         }
 
+        /// Obtiene el Id de un usuario en Keycloak por su username (email).
         public async Task<string> GetUserIdByUsernameAsyncRepo(string email)
         {
             return await _authService.GetUserIdByUsernameAsync(email);
         }
 
+        /// Actualiza el nombre y apellido de un usuario en Keycloak.
         public Task<bool> UpdateUserInKeycloakAsyncRepo(string oldEmail, string newName, string newLastname)
         {
             return _authService.UpdateUserInKeycloakAsync(oldEmail, newName, newLastname);

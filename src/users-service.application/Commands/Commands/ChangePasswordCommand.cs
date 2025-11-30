@@ -8,6 +8,7 @@ using MediatR;
 
 namespace users_service.application.Commands.Commands
 {
+    /// Comando para cambiar la contraseña de un usuario en estado borrador.
     public class ChangePasswordCommand: IRequest<bool>
     {
         public string Email { get; set; }

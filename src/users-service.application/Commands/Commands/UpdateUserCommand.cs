@@ -10,6 +10,7 @@ namespace users_service.application.Commands.Commands
 {
     public class UpdateUserCommand : IRequest<bool>
     {
+        /// Comando para actualizar los datos de un usuario en estado borrador.
         public string Email { get; set; }
         public UpdateUserDTO UpdateUserDTO { get; set; }
 

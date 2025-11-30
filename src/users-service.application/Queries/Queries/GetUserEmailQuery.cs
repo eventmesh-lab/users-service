@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace users_service.application.Queries.Queries
 {
+    /// Comando para consultar un usuario mediante su email.
     public class GetUserEmailQuery: IRequest<GetUserResponseDto>
     {
         public string Email { get; set; }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace users_service.application.DTOs.DTOResponse
 {
+    /// DTO de respuesta para representar un usuario sin exponer su rol en las respuestas de la API.
     public class GetUserResponseDto
     {
         public string FullName { get; set; }

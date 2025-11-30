@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 namespace users_service.application.Commands.Commands
 {
+    /// Comando para crear un nuevo usuario en estado borrador.
     public class CreateUserCommand : IRequest<CreateUserResponseDto>
     {
         public UserCreateDTO UserCreateDTO { get; set; }
