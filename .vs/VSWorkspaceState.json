@@ -7,10 +7,9 @@
     "\\src\\users-service.api\\Controllers",
     "\\src\\users-service.application",
     "\\src\\users-service.application\\Validator",
-    "\\src\\users-service.domain\\ValueObjects",
     "\\src\\users-service.infrastructure",
     "\\src\\users-service.infrastructure\\ServiceInfrastructure"
   ],
-  "SelectedNode": "\\src\\users-service.application\\Validator\\UpdateUserDTOValidator.cs",
+  "SelectedNode": "\\users-service.sln",
   "PreviewInSolutionExplorer": false
 }

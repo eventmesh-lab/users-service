@@ -3,28 +3,80 @@
   "WorkspaceRootPath": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\validator\\updateuserdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\validator\\updateuserdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CA28819D-5B6E-4147-B031-01D8A2672C6F}|tests\\users-service.api.Tests\\users-service.api.Tests.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\tests\\users-service.api.tests\\controllers\\usercontrollerstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CA28819D-5B6E-4147-B031-01D8A2672C6F}|tests\\users-service.api.Tests\\users-service.api.Tests.csproj|solutionrelative:tests\\users-service.api.tests\\controllers\\usercontrollerstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\dtoresponse\\getusersresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\dtoresponse\\getusersresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\dtoresponse\\getuserresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\dtoresponse\\getuserresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\dtoresponse\\createuserresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\dtoresponse\\createuserresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\userkeycloakdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\userkeycloakdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6AD5F20-4DCB-4D3A-1CED-B1DFE7D1CC14}|src\\users-service.domain\\users-service.domain.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.domain\\exceptions\\usuariodtoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6AD5F20-4DCB-4D3A-1CED-B1DFE7D1CC14}|src\\users-service.domain\\users-service.domain.csproj|solutionrelative:src\\users-service.domain\\exceptions\\usuariodtoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\validator\\userdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\validator\\userdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\validator\\updateuserdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\validator\\updateuserdtovalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\validator\\changepasswordvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\validator\\changepasswordvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{58315267-98D3-7184-BC79-4A050AFBE44F}|src\\users-service.api\\users-service.api.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.api\\controllers\\usercontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{58315267-98D3-7184-BC79-4A050AFBE44F}|src\\users-service.api\\users-service.api.csproj|solutionrelative:src\\users-service.api\\controllers\\usercontrollers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\realm\\myrealm-realm.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:realm\\myrealm-realm.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\queries\\handlers\\getuserbyemailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\queries\\handlers\\getuserbyemailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\commands\\handlers\\updateuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\commands\\handlers\\updateuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A260871-B7D0-4B7A-829E-EA4C67E73E97}|tests\\users-service.application.Tests\\users-service.application.Tests.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\tests\\users-service.application.tests\\commands\\handlers\\createuserhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A260871-B7D0-4B7A-829E-EA4C67E73E97}|tests\\users-service.application.Tests\\users-service.application.Tests.csproj|solutionrelative:tests\\users-service.application.tests\\commands\\handlers\\createuserhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58315267-98D3-7184-BC79-4A050AFBE44F}|src\\users-service.api\\users-service.api.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.api\\users-service.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{58315267-98D3-7184-BC79-4A050AFBE44F}|src\\users-service.api\\users-service.api.csproj|solutionrelative:src\\users-service.api\\users-service.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CA28819D-5B6E-4147-B031-01D8A2672C6F}|tests\\users-service.api.Tests\\users-service.api.Tests.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\tests\\users-service.api.tests\\controllers\\usercontrollerstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CA28819D-5B6E-4147-B031-01D8A2672C6F}|tests\\users-service.api.Tests\\users-service.api.Tests.csproj|solutionrelative:tests\\users-service.api.tests\\controllers\\usercontrollerstests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\realm\\myrealm-realm.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:realm\\myrealm-realm.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\services\\userservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -59,10 +111,6 @@
       "RelativeMoniker": "D:0:0:{3968163C-CC2A-03F7-7962-81C76797AD99}|src\\users-service.infrastructure\\users-service.infrastructure.csproj|solutionrelative:src\\users-service.infrastructure\\mappers\\usermappers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\validator\\changepasswordvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\validator\\changepasswordvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\mappers\\usermapperapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\mappers\\usermapperapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -71,24 +119,16 @@
       "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\interfaces\\iuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\interfaces\\ikeycloakrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\interfaces\\ikeycloakrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D6AD5F20-4DCB-4D3A-1CED-B1DFE7D1CC14}|src\\users-service.domain\\users-service.domain.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.domain\\interfaces\\ikeycloakserviceinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D6AD5F20-4DCB-4D3A-1CED-B1DFE7D1CC14}|src\\users-service.domain\\users-service.domain.csproj|solutionrelative:src\\users-service.domain\\interfaces\\ikeycloakserviceinfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\interfaces\\ikeycloakrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\interfaces\\ikeycloakrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\queries\\handlers\\getusershandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\queries\\handlers\\getusershandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\queries\\handlers\\getuserbyemailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\queries\\handlers\\getuserbyemailhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\commands\\handlers\\updateuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\commands\\handlers\\updateuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\commands\\handlers\\createuserhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -119,40 +159,8 @@
       "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\commands\\commands\\changepasswordcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\dtoresponse\\getusersresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\dtoresponse\\getusersresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\dtoresponse\\getuserresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\dtoresponse\\getuserresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\dtoresponse\\createuserresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\dtoresponse\\createuserresponsedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\userkeycloakdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\userkeycloakdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{ED41C404-3C0C-454B-B06E-34BD841A4A01}|tests\\users-service.infrastructure.Tests\\users-service.infrastructure.Tests.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\tests\\users-service.infrastructure.tests\\serviceinfrastructure\\keycloakserviceinfrastructuretests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{ED41C404-3C0C-454B-B06E-34BD841A4A01}|tests\\users-service.infrastructure.Tests\\users-service.infrastructure.Tests.csproj|solutionrelative:tests\\users-service.infrastructure.tests\\serviceinfrastructure\\keycloakserviceinfrastructuretests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\updateuserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\usercreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.application\\dtos\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FBF47E4A-BD22-DA00-F954-4B0F02CEB7A3}|src\\users-service.application\\users-service.application.csproj|solutionrelative:src\\users-service.application\\dtos\\changepassworddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6AD5F20-4DCB-4D3A-1CED-B1DFE7D1CC14}|src\\users-service.domain\\users-service.domain.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.domain\\exceptions\\usuariodtoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6AD5F20-4DCB-4D3A-1CED-B1DFE7D1CC14}|src\\users-service.domain\\users-service.domain.csproj|solutionrelative:src\\users-service.domain\\exceptions\\usuariodtoexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D6AD5F20-4DCB-4D3A-1CED-B1DFE7D1CC14}|src\\users-service.domain\\users-service.domain.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.domain\\enumerables\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -165,10 +173,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D6AD5F20-4DCB-4D3A-1CED-B1DFE7D1CC14}|src\\users-service.domain\\users-service.domain.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\src\\users-service.domain\\valueobjects\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D6AD5F20-4DCB-4D3A-1CED-B1DFE7D1CC14}|src\\users-service.domain\\users-service.domain.csproj|solutionrelative:src\\users-service.domain\\valueobjects\\email.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0A260871-B7D0-4B7A-829E-EA4C67E73E97}|tests\\users-service.application.Tests\\users-service.application.Tests.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\tests\\users-service.application.tests\\commands\\handlers\\createuserhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A260871-B7D0-4B7A-829E-EA4C67E73E97}|tests\\users-service.application.Tests\\users-service.application.Tests.csproj|solutionrelative:tests\\users-service.application.tests\\commands\\handlers\\createuserhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0A260871-B7D0-4B7A-829E-EA4C67E73E97}|tests\\users-service.application.Tests\\users-service.application.Tests.csproj|c:\\users\\crismary gonzalez\\documents\\github\\users-service\\tests\\users-service.application.tests\\commands\\handlers\\changepasswordcommandtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -186,11 +190,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 15,
               "Title": "CreateUserHandlerTests.cs",
               "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs",
               "RelativeDocumentMoniker": "tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs",
@@ -204,484 +208,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "UserControllersTests.cs",
               "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.api.Tests\\Controllers\\UserControllersTests.cs",
               "RelativeDocumentMoniker": "tests\\users-service.api.Tests\\Controllers\\UserControllersTests.cs",
               "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.api.Tests\\Controllers\\UserControllersTests.cs",
               "RelativeToolTip": "tests\\users-service.api.Tests\\Controllers\\UserControllersTests.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAgwGIBAABgAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAtwHEAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-22T18:20:55.486Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "myrealm-realm.json",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\realm\\myrealm-realm.json",
-              "RelativeDocumentMoniker": "realm\\myrealm-realm.json",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\realm\\myrealm-realm.json",
-              "RelativeToolTip": "realm\\myrealm-realm.json",
-              "ViewState": "AgIAAH0IAAAAAAAAAAAAALAFAACoAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-11-29T16:58:33.892Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UserControllers.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\Controllers\\UserControllers.cs",
-              "RelativeDocumentMoniker": "src\\users-service.api\\Controllers\\UserControllers.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\Controllers\\UserControllers.cs",
-              "RelativeToolTip": "src\\users-service.api\\Controllers\\UserControllers.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAkwF4AAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:52:42.507Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UserServices.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Services\\UserServices.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Services\\UserServices.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Services\\UserServices.cs",
-              "RelativeToolTip": "src\\users-service.application\\Services\\UserServices.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:32:18.941Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserDTOValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\UserDTOValidator.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Validator\\UserDTOValidator.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\UserDTOValidator.cs",
-              "RelativeToolTip": "src\\users-service.application\\Validator\\UserDTOValidator.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAmwCYAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:40:14.18Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UpdateUserDTOValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\UpdateUserDTOValidator.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Validator\\UpdateUserDTOValidator.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\UpdateUserDTOValidator.cs",
-              "RelativeToolTip": "src\\users-service.application\\Validator\\UpdateUserDTOValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:39:42.49Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "KeycloakServiceInfrastracture.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
-              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
-              "RelativeToolTip": "src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
-              "ViewState": "AgIAANgAAAAAAAAAAAAIwOYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T22:16:35.322Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "UserRepositoyPostgres.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Repositories\\UserRepositoyPostgres.cs",
-              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Persistence\\Repositories\\UserRepositoyPostgres.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Repositories\\UserRepositoyPostgres.cs",
-              "RelativeToolTip": "src\\users-service.infrastructure\\Persistence\\Repositories\\UserRepositoyPostgres.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAkwFQAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:42:56.416Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\docker-compose.yml",
-              "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\docker-compose.yml",
-              "RelativeToolTip": "docker-compose.yml",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
-              "WhenOpened": "2025-11-24T01:29:21.506Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "KeycloakRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Repositories\\Keycloak\\KeycloakRepository.cs",
-              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Persistence\\Repositories\\Keycloak\\KeycloakRepository.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Repositories\\Keycloak\\KeycloakRepository.cs",
-              "RelativeToolTip": "src\\users-service.infrastructure\\Persistence\\Repositories\\Keycloak\\KeycloakRepository.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAAC4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:42:09.382Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserPostgres.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Models\\UserPostgres.cs",
-              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Persistence\\Models\\UserPostgres.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Models\\UserPostgres.cs",
-              "RelativeToolTip": "src\\users-service.infrastructure\\Persistence\\Models\\UserPostgres.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:41:54.8Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Persistence\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "src\\users-service.infrastructure\\Persistence\\Context\\AppDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:41:36.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "UserConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
-              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
-              "RelativeToolTip": "src\\users-service.infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:41:21.281Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "UserMappers.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Mappers\\UserMappers.cs",
-              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Mappers\\UserMappers.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Mappers\\UserMappers.cs",
-              "RelativeToolTip": "src\\users-service.infrastructure\\Mappers\\UserMappers.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:40:56.081Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ChangePasswordValidator.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\ChangePasswordValidator.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Validator\\ChangePasswordValidator.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\ChangePasswordValidator.cs",
-              "RelativeToolTip": "src\\users-service.application\\Validator\\ChangePasswordValidator.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:39:25.391Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "UserMapperApp.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Mappers\\UserMapperApp.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Mappers\\UserMapperApp.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Mappers\\UserMapperApp.cs",
-              "RelativeToolTip": "src\\users-service.application\\Mappers\\UserMapperApp.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDoAAABcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:38:01.757Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "IUserServices.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Interfaces\\IUserServices.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Interfaces\\IUserServices.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Interfaces\\IUserServices.cs",
-              "RelativeToolTip": "src\\users-service.application\\Interfaces\\IUserServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:37:11.01Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "IKeycloakServiceInfrastructure.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
-              "RelativeDocumentMoniker": "src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
-              "RelativeToolTip": "src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:34:35.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IKeycloakRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Interfaces\\IKeycloakRepository.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Interfaces\\IKeycloakRepository.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Interfaces\\IKeycloakRepository.cs",
-              "RelativeToolTip": "src\\users-service.application\\Interfaces\\IKeycloakRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABDAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:33:19.132Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "GetUsersHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Handlers\\GetUsersHandler.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Queries\\Handlers\\GetUsersHandler.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Handlers\\GetUsersHandler.cs",
-              "RelativeToolTip": "src\\users-service.application\\Queries\\Handlers\\GetUsersHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:31:26.951Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "GetUserByEmailHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Handlers\\GetUserByEmailHandler.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Queries\\Handlers\\GetUserByEmailHandler.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Handlers\\GetUserByEmailHandler.cs",
-              "RelativeToolTip": "src\\users-service.application\\Queries\\Handlers\\GetUserByEmailHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:31:10.698Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "UpdateUserHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\UpdateUserHandler.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Handlers\\UpdateUserHandler.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\UpdateUserHandler.cs",
-              "RelativeToolTip": "src\\users-service.application\\Commands\\Handlers\\UpdateUserHandler.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAwDAAAABRAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:28:11.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "CreateUserHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\CreateUserHandler.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Handlers\\CreateUserHandler.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\CreateUserHandler.cs",
-              "RelativeToolTip": "src\\users-service.application\\Commands\\Handlers\\CreateUserHandler.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAYwEAAAAAcAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:23:59.58Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "ChangePasswordHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\ChangePasswordHandler.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Handlers\\ChangePasswordHandler.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\ChangePasswordHandler.cs",
-              "RelativeToolTip": "src\\users-service.application\\Commands\\Handlers\\ChangePasswordHandler.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACUAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:18:28.671Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "GetUsersQuery.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Queries\\GetUsersQuery.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Queries\\Queries\\GetUsersQuery.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Queries\\GetUsersQuery.cs",
-              "RelativeToolTip": "src\\users-service.application\\Queries\\Queries\\GetUsersQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:19:09.574Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 25,
-              "Title": "GetUserEmailQuery.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Queries\\GetUserEmailQuery.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Queries\\Queries\\GetUserEmailQuery.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Queries\\GetUserEmailQuery.cs",
-              "RelativeToolTip": "src\\users-service.application\\Queries\\Queries\\GetUserEmailQuery.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:18:37.279Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 26,
-              "Title": "UpdateUserCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\UpdateUserCommand.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Commands\\UpdateUserCommand.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\UpdateUserCommand.cs",
-              "RelativeToolTip": "src\\users-service.application\\Commands\\Commands\\UpdateUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:17:39.838Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 27,
-              "Title": "CreateUserCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\CreateUserCommand.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Commands\\CreateUserCommand.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\CreateUserCommand.cs",
-              "RelativeToolTip": "src\\users-service.application\\Commands\\Commands\\CreateUserCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:17:28.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 28,
-              "Title": "ChangePasswordCommand.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\ChangePasswordCommand.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Commands\\ChangePasswordCommand.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\ChangePasswordCommand.cs",
-              "RelativeToolTip": "src\\users-service.application\\Commands\\Commands\\ChangePasswordCommand.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:16:53.245Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 29,
-              "Title": "GetUsersResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\GetUsersResponseDto.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\DTOResponse\\GetUsersResponseDto.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\GetUsersResponseDto.cs",
-              "RelativeToolTip": "src\\users-service.application\\DTOs\\DTOResponse\\GetUsersResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:12:40.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "GetUserResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\GetUserResponseDto.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\DTOResponse\\GetUserResponseDto.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\GetUserResponseDto.cs",
-              "RelativeToolTip": "src\\users-service.application\\DTOs\\DTOResponse\\GetUserResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:11:36.579Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "CreateUserResponseDto.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\CreateUserResponseDto.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\DTOResponse\\CreateUserResponseDto.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\CreateUserResponseDto.cs",
-              "RelativeToolTip": "src\\users-service.application\\DTOs\\DTOResponse\\CreateUserResponseDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:10:40.666Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
-              "Title": "UserKeycloakDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UserKeycloakDTO.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\UserKeycloakDTO.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UserKeycloakDTO.cs",
-              "RelativeToolTip": "src\\users-service.application\\DTOs\\UserKeycloakDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:07:23.855Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 33,
-              "Title": "KeycloakServiceInfrastructureTests.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
-              "RelativeDocumentMoniker": "tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
-              "RelativeToolTip": "tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
-              "ViewState": "AgIAADkDAAAAAAAAAAAswJ4BAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T22:18:05.281Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 34,
-              "Title": "UpdateUserDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UpdateUserDTO.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\UpdateUserDTO.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UpdateUserDTO.cs",
-              "RelativeToolTip": "src\\users-service.application\\DTOs\\UpdateUserDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:06:44.372Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 35,
-              "Title": "UserCreateDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UserCreateDTO.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\UserCreateDTO.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UserCreateDTO.cs",
-              "RelativeToolTip": "src\\users-service.application\\DTOs\\UserCreateDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:07:01.135Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 36,
-              "Title": "ChangePasswordDTO.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\ChangePasswordDTO.cs",
-              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\ChangePasswordDTO.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\ChangePasswordDTO.cs",
-              "RelativeToolTip": "src\\users-service.application\\DTOs\\ChangePasswordDTO.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T16:05:36.749Z",
               "EditorCaption": ""
             },
             {
@@ -694,20 +230,501 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 2,
+              "Title": "GetUserResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\GetUserResponseDto.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\DTOResponse\\GetUserResponseDto.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\GetUserResponseDto.cs",
+              "RelativeToolTip": "src\\users-service.application\\DTOs\\DTOResponse\\GetUserResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:11:36.579Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetUsersResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\GetUsersResponseDto.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\DTOResponse\\GetUsersResponseDto.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\GetUsersResponseDto.cs",
+              "RelativeToolTip": "src\\users-service.application\\DTOs\\DTOResponse\\GetUsersResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:12:40.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CreateUserResponseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\CreateUserResponseDto.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\DTOResponse\\CreateUserResponseDto.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\DTOResponse\\CreateUserResponseDto.cs",
+              "RelativeToolTip": "src\\users-service.application\\DTOs\\DTOResponse\\CreateUserResponseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:10:40.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserKeycloakDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UserKeycloakDTO.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\UserKeycloakDTO.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UserKeycloakDTO.cs",
+              "RelativeToolTip": "src\\users-service.application\\DTOs\\UserKeycloakDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:07:23.855Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserCreateDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UserCreateDTO.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\UserCreateDTO.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UserCreateDTO.cs",
+              "RelativeToolTip": "src\\users-service.application\\DTOs\\UserCreateDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:07:01.135Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UpdateUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UpdateUserDTO.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\UpdateUserDTO.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\UpdateUserDTO.cs",
+              "RelativeToolTip": "src\\users-service.application\\DTOs\\UpdateUserDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:06:44.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ChangePasswordDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\ChangePasswordDTO.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\DTOs\\ChangePasswordDTO.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\DTOs\\ChangePasswordDTO.cs",
+              "RelativeToolTip": "src\\users-service.application\\DTOs\\ChangePasswordDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:05:36.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserDTOValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\UserDTOValidator.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Validator\\UserDTOValidator.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\UserDTOValidator.cs",
+              "RelativeToolTip": "src\\users-service.application\\Validator\\UserDTOValidator.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAgwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:40:14.18Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UpdateUserDTOValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\UpdateUserDTOValidator.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Validator\\UpdateUserDTOValidator.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\UpdateUserDTOValidator.cs",
+              "RelativeToolTip": "src\\users-service.application\\Validator\\UpdateUserDTOValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:39:42.49Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "UsuarioDTOException.cs",
               "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Exceptions\\UsuarioDTOException.cs",
               "RelativeDocumentMoniker": "src\\users-service.domain\\Exceptions\\UsuarioDTOException.cs",
               "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Exceptions\\UsuarioDTOException.cs",
               "RelativeToolTip": "src\\users-service.domain\\Exceptions\\UsuarioDTOException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-29T16:00:57.244Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ChangePasswordValidator.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\ChangePasswordValidator.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Validator\\ChangePasswordValidator.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Validator\\ChangePasswordValidator.cs",
+              "RelativeToolTip": "src\\users-service.application\\Validator\\ChangePasswordValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:39:25.391Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UserControllers.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\Controllers\\UserControllers.cs",
+              "RelativeDocumentMoniker": "src\\users-service.api\\Controllers\\UserControllers.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\Controllers\\UserControllers.cs",
+              "RelativeToolTip": "src\\users-service.api\\Controllers\\UserControllers.cs",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAgwJQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:52:42.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetUserByEmailHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Handlers\\GetUserByEmailHandler.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Queries\\Handlers\\GetUserByEmailHandler.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Handlers\\GetUserByEmailHandler.cs",
+              "RelativeToolTip": "src\\users-service.application\\Queries\\Handlers\\GetUserByEmailHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:31:10.698Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UpdateUserHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\UpdateUserHandler.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Handlers\\UpdateUserHandler.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\UpdateUserHandler.cs",
+              "RelativeToolTip": "src\\users-service.application\\Commands\\Handlers\\UpdateUserHandler.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwDAAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:28:11.211Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "users-service.api.http",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\users-service.api.http",
+              "RelativeDocumentMoniker": "src\\users-service.api\\users-service.api.http",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\users-service.api.http",
+              "RelativeToolTip": "src\\users-service.api\\users-service.api.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-11-30T00:14:18.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\docker-compose.yml",
+              "RelativeDocumentMoniker": "docker-compose.yml",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\docker-compose.yml",
+              "RelativeToolTip": "docker-compose.yml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
+              "WhenOpened": "2025-11-29T22:38:51.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UserServices.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Services\\UserServices.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Services\\UserServices.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Services\\UserServices.cs",
+              "RelativeToolTip": "src\\users-service.application\\Services\\UserServices.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIBJwCQAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:32:18.941Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "myrealm-realm.json",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\realm\\myrealm-realm.json",
+              "RelativeDocumentMoniker": "realm\\myrealm-realm.json",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\realm\\myrealm-realm.json",
+              "RelativeToolTip": "realm\\myrealm-realm.json",
+              "ViewState": "AgIAAHoIAAAAAAAAAIBJwLAFAACoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-11-29T16:58:33.892Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "KeycloakServiceInfrastracture.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
+              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
+              "RelativeToolTip": "src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
+              "ViewState": "AgIAANgAAAAAAAAAAAAIwOYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T22:16:35.322Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "UserRepositoyPostgres.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Repositories\\UserRepositoyPostgres.cs",
+              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Persistence\\Repositories\\UserRepositoyPostgres.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Repositories\\UserRepositoyPostgres.cs",
+              "RelativeToolTip": "src\\users-service.infrastructure\\Persistence\\Repositories\\UserRepositoyPostgres.cs",
+              "ViewState": "AgIAADoAAAAAAAAAAAAkwFQAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:42:56.416Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "KeycloakRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Repositories\\Keycloak\\KeycloakRepository.cs",
+              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Persistence\\Repositories\\Keycloak\\KeycloakRepository.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Repositories\\Keycloak\\KeycloakRepository.cs",
+              "RelativeToolTip": "src\\users-service.infrastructure\\Persistence\\Repositories\\Keycloak\\KeycloakRepository.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAIBJwC4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:42:09.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "UserPostgres.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Models\\UserPostgres.cs",
+              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Persistence\\Models\\UserPostgres.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Models\\UserPostgres.cs",
+              "RelativeToolTip": "src\\users-service.infrastructure\\Persistence\\Models\\UserPostgres.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABRAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:41:54.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Context\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Persistence\\Context\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Context\\AppDbContext.cs",
+              "RelativeToolTip": "src\\users-service.infrastructure\\Persistence\\Context\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:41:36.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "UserConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "RelativeToolTip": "src\\users-service.infrastructure\\Persistence\\Configurations\\UserConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:41:21.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "UserMappers.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Mappers\\UserMappers.cs",
+              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\Mappers\\UserMappers.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\Mappers\\UserMappers.cs",
+              "RelativeToolTip": "src\\users-service.infrastructure\\Mappers\\UserMappers.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:40:56.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "UserMapperApp.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Mappers\\UserMapperApp.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Mappers\\UserMapperApp.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Mappers\\UserMapperApp.cs",
+              "RelativeToolTip": "src\\users-service.application\\Mappers\\UserMapperApp.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDoAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:38:01.757Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "IUserServices.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Interfaces\\IUserServices.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Interfaces\\IUserServices.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Interfaces\\IUserServices.cs",
+              "RelativeToolTip": "src\\users-service.application\\Interfaces\\IUserServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:37:11.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "IKeycloakServiceInfrastructure.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
+              "RelativeDocumentMoniker": "src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
+              "RelativeToolTip": "src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:34:35.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "IKeycloakRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Interfaces\\IKeycloakRepository.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Interfaces\\IKeycloakRepository.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Interfaces\\IKeycloakRepository.cs",
+              "RelativeToolTip": "src\\users-service.application\\Interfaces\\IKeycloakRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:33:19.132Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "GetUsersHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Handlers\\GetUsersHandler.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Queries\\Handlers\\GetUsersHandler.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Handlers\\GetUsersHandler.cs",
+              "RelativeToolTip": "src\\users-service.application\\Queries\\Handlers\\GetUsersHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:31:26.951Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "CreateUserHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\CreateUserHandler.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Handlers\\CreateUserHandler.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\CreateUserHandler.cs",
+              "RelativeToolTip": "src\\users-service.application\\Commands\\Handlers\\CreateUserHandler.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwEAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:23:59.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "ChangePasswordHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\ChangePasswordHandler.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Handlers\\ChangePasswordHandler.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Handlers\\ChangePasswordHandler.cs",
+              "RelativeToolTip": "src\\users-service.application\\Commands\\Handlers\\ChangePasswordHandler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwCUAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:18:28.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "GetUsersQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Queries\\GetUsersQuery.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Queries\\Queries\\GetUsersQuery.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Queries\\GetUsersQuery.cs",
+              "RelativeToolTip": "src\\users-service.application\\Queries\\Queries\\GetUsersQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:19:09.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "GetUserEmailQuery.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Queries\\GetUserEmailQuery.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Queries\\Queries\\GetUserEmailQuery.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Queries\\Queries\\GetUserEmailQuery.cs",
+              "RelativeToolTip": "src\\users-service.application\\Queries\\Queries\\GetUserEmailQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:18:37.279Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "UpdateUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\UpdateUserCommand.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Commands\\UpdateUserCommand.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\UpdateUserCommand.cs",
+              "RelativeToolTip": "src\\users-service.application\\Commands\\Commands\\UpdateUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:17:39.838Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CreateUserCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\CreateUserCommand.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Commands\\CreateUserCommand.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\CreateUserCommand.cs",
+              "RelativeToolTip": "src\\users-service.application\\Commands\\Commands\\CreateUserCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:17:28.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 38,
+              "Title": "ChangePasswordCommand.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\ChangePasswordCommand.cs",
+              "RelativeDocumentMoniker": "src\\users-service.application\\Commands\\Commands\\ChangePasswordCommand.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.application\\Commands\\Commands\\ChangePasswordCommand.cs",
+              "RelativeToolTip": "src\\users-service.application\\Commands\\Commands\\ChangePasswordCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-29T16:16:53.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "KeycloakServiceInfrastructureTests.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
+              "RelativeDocumentMoniker": "tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
+              "RelativeToolTip": "tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
+              "ViewState": "AgIAADkDAAAAAAAAAAAswJ4BAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-22T22:18:05.281Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
               "Title": "Rol.cs",
               "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Enumerables\\Rol.cs",
               "RelativeDocumentMoniker": "src\\users-service.domain\\Enumerables\\Rol.cs",
@@ -720,7 +737,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 41,
               "Title": "Role.cs",
               "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\ValueObjects\\Role.cs",
               "RelativeDocumentMoniker": "src\\users-service.domain\\ValueObjects\\Role.cs",
@@ -733,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 42,
               "Title": "Email.cs",
               "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\ValueObjects\\Email.cs",
               "RelativeDocumentMoniker": "src\\users-service.domain\\ValueObjects\\Email.cs",
@@ -746,27 +763,29 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 43,
               "Title": "ChangePasswordCommandTest.cs",
               "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.application.Tests\\Commands\\Handlers\\ChangePasswordCommandTest.cs",
               "RelativeDocumentMoniker": "tests\\users-service.application.Tests\\Commands\\Handlers\\ChangePasswordCommandTest.cs",
               "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.application.Tests\\Commands\\Handlers\\ChangePasswordCommandTest.cs",
               "RelativeToolTip": "tests\\users-service.application.Tests\\Commands\\Handlers\\ChangePasswordCommandTest.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAIBQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-25T15:40:34.41Z"
+              "WhenOpened": "2025-11-25T15:40:34.41Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 44,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\Program.cs",
               "RelativeDocumentMoniker": "src\\users-service.api\\Program.cs",
               "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\Program.cs",
               "RelativeToolTip": "src\\users-service.api\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACsAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAIBJwCsAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T01:23:10.443Z"
+              "WhenOpened": "2025-11-24T01:23:10.443Z",
+              "EditorCaption": ""
             }
           ]
         }

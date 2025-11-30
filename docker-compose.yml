@@ -51,6 +51,7 @@ services:
         condition: service_healthy
       keycloak:
         condition: service_started
+      
 
 volumes:
   postgres_data:
