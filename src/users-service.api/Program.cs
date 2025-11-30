@@ -15,14 +15,11 @@ using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// CORS configuration: allow configurable origins via configuration or fall back to common localhost ports
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("DefaultCors", policy =>
+    options.AddPolicy("AllowLocalhost3000", policy =>
     {
-        var configuredOrigins = builder.Configuration.GetSection("Cors:AllowedOrigins").Get<string[]>()
-            ?? new[] { "http://localhost:3000", "http://localhost:7181" };
-        policy.WithOrigins(configuredOrigins)
+        policy.WithOrigins("http://localhost:3000")
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
@@ -59,13 +56,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddHealthChecks();
 
 var app = builder.Build();
-app.UseCors("DefaultCors");
+app.UseCors("AllowLocalhost3000");
 // Configure the HTTP request pipeline.
-// Habilitar Swagger en Development y Production
-if (app.Environment.IsDevelopment() || !app.Environment.IsProduction() || Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") != "Staging")
+if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
@@ -77,40 +72,20 @@ using (var scope = app.Services.CreateScope())
     try
     {
         // Obtiene el DbContext
-        var context = services.GetRequiredService<AppDbContext>();
-        
-        // Reintentos para conectar a la BD
-        int maxRetries = 5;
-        int retryCount = 0;
-        
-        while (retryCount < maxRetries)
-        {
-            try
-            {
-                context.Database.Migrate();
-                break;
-            }
-            catch (Exception ex) when (retryCount < maxRetries - 1)
-            {
-                retryCount++;
-                var logger = services.GetRequiredService<ILogger<Program>>();
-                logger.LogWarning($"Intento {retryCount}/{maxRetries} - Error conectando a la BD: {ex.Message}. Reintentando en 5 segundos...");
-                System.Threading.Thread.Sleep(5000);
-            }
-        }
+        var context = services.GetRequiredService<AppDbContext>(); 
+
+        context.Database.Migrate();
     }
     catch (Exception ex)
     {
         var logger = services.GetRequiredService<ILogger<Program>>();
-        logger.LogError(ex, "Ocurriï¿½ un error al aplicar las migraciones a la base de datos.");
+        logger.LogError(ex, "Ocurrió un error al aplicar las migraciones a la base de datos.");
     }
 }
-// In container we serve HTTP only; avoid forced HTTPS redirection
-// Remove HTTPS redirection to prevent 307/308 loops when only HTTP is exposed
+app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
 app.MapControllers();
-app.MapHealthChecks("/health");
 
 app.Run();

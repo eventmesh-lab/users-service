@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace users_service.domain.Entities
 {
+    /// Agregado raíz que representa un usuario.
     public class User
     {
         public Guid Id { get; set; }

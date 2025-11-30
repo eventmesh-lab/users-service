@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace users_service.domain.ValueObjects
 {
+    /// Value Object que representa el email de un usuario.
     public record Email
     {
         public static readonly Regex _regex = new Regex(
@@ -20,6 +21,7 @@ namespace users_service.domain.ValueObjects
             Value = value;
         }
 
+        /// Crea una nueva instancia de Email.
         public static Email Create(string value)
         {
             if (string.IsNullOrWhiteSpace(value))
@@ -31,6 +33,7 @@ namespace users_service.domain.ValueObjects
             return new Email(value);
         }
 
+        /// Obtiene el email.
         public override string ToString() => Value;
 
     }

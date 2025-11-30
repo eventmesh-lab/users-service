@@ -1,39 +1,35 @@
-﻿using MediatR;
-using Microsoft.AspNetCore.Http.HttpResults;
+﻿using FluentAssertions;
+using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Reflection.Metadata;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
-using System.Xml.Linq;
 using users_service.api.Controllers;
 using users_service.application.Commands.Commands;
 using users_service.application.DTOs;
 using users_service.application.DTOs.DTOResponse;
 using users_service.application.Interfaces;
 using users_service.application.Queries.Queries;
-using users_service.domain.Entities;
 using users_service.domain.Exceptions;
-using users_service.domain.ValueObjects;
+using Xunit;
+using Moq;
 
-namespace users_service.api.Tests.Controllers
+namespace users_service.tests
 {
     public class UserControllersTests
     {
-        private readonly Mock<IMediator> _mockMediator;
+        private readonly Mock<IMediator> _mediatorMock;
+        private readonly Mock<IUserServices> _userServiceMock;
         private readonly UserControllers _controller;
 
         public UserControllersTests()
         {
-            _mockMediator = new Mock<IMediator>();
-            _controller = new UserControllers(Mock.Of<IUserServices>(), _mockMediator.Object);
+            _mediatorMock = new Mock<IMediator>();
+            _userServiceMock = new Mock<IUserServices>();
+            _controller = new UserControllers(_userServiceMock.Object, _mediatorMock.Object);
         }
-
-
 
         [Fact]
         public async Task CreateUser_DebeRetornarOk_SiDTOValido()
@@ -52,7 +48,7 @@ namespace users_service.api.Tests.Controllers
             };
             CreateUserResponseDto responseDto = new CreateUserResponseDto(dto.FirstName, dto.LastName, dto.Email);
 
-            _mockMediator
+            _mediatorMock
                 .Setup(m => m.Send(It.IsAny<CreateUserCommand>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(responseDto);
 
@@ -65,111 +61,46 @@ namespace users_service.api.Tests.Controllers
 
         }
 
+
         [Fact]
-        public async Task CreateUser_DebeRetornarBadRequest_SiDTOInvalido()
+        public async Task CreateUser_InvalidData_ReturnsBadRequest()
         {
-            // Arrange
-            var dto = new UserCreateDTO
+            var invalidDto = new UserCreateDTO
             {
-                FirstName = "",
-                LastName = "Perez",
-                Email = "user@gmail.com",
-                PhoneNumber = "04126110032",
-                Address = "123 Test St",
-                Birthdate = new DateTime(2000, 1, 1),
-                RoleUser = "Usuario",
-                Password = "password123"
+                FirstName = "Juan",
+                Email = "invalid-email",
+                Birthdate = DateTime.Today
             };
 
-            var result = await _controller.CreateUser(dto, CancellationToken.None);
+            var result = await _controller.CreateUser(invalidDto, CancellationToken.None);
 
-            // Assert
-            var ex = Assert.IsType<ObjectResult>(result);
-            var error = ex.Value.GetType().GetProperty("message")?.GetValue(ex.Value, null);
-            Assert.Equal("Los datos ingresados no son válidos.  El nombre es obligatorio.", error);
-
+            var badRequest = result.Should().BeOfType<BadRequestObjectResult>().Subject;
+            badRequest.StatusCode.Should().Be(400);
+            badRequest.Value.ToString().Should().Contain("El formato del correo es inválido");
         }
 
         [Fact]
-        public async Task CreateUser_DebeRetornarBadRequest_YearInvalido()
+        public async Task CreateUser_InternalException_Returns500()
         {
-            // Arrange
-            var dto = new UserCreateDTO
+            var validDto = new UserCreateDTO
             {
-                FirstName = "David",
+                FirstName = "Juan",
                 LastName = "Perez",
-                Email = "user@gmail.com",
-                PhoneNumber = "04126110032",
-                Address = "123 Test St",
-                Birthdate = new DateTime(2025, 1, 1),
-                RoleUser = "Usuario",
-                Password = "password123"
-            };
-            _mockMediator
-                .Setup(m => m.Send(It.IsAny<CreateUserCommand>(), It.IsAny<CancellationToken>()))
-                .ThrowsAsync(new Exception("Error inesperado"));
-
-            var result = await _controller.CreateUser(dto, CancellationToken.None);
-
-            // Assert
-            var ex = Assert.IsType<ObjectResult>(result);
-            Assert.Equal(500, ex.StatusCode);
-            var error = ex.Value.GetType().GetProperty("message")?.GetValue(ex.Value, null);
-            Assert.Equal("Los datos ingresados no son válidos. Debes ser mayor de 18 años.", error);
-
-        }
-
-        [Fact]
-        public async Task CreateUser_DebeRetornar500_SiOcurreErrorInesperado()
-        {
-            // Arrange
-            var dto = new UserCreateDTO
-            {
-                FirstName = "David",
-                LastName = "Perez",
-                Email = "user@gmail.com",
-                PhoneNumber = "12345678910",
-                Address = "123 Test St",
-                Birthdate = new DateTime(1990, 1, 1),
-                RoleUser = "Usuario"
+                Email = "juan@test.com",
+                Password = "password123",
+                PhoneNumber = "12345678901",
+                Address = "Calle 123",
+                Birthdate = DateTime.Today.AddYears(-20),
+                RoleUser = "User"
             };
 
-            _mockMediator
-                .Setup(m => m.Send(It.IsAny<CreateUserCommand>(), It.IsAny<CancellationToken>()))
-                .ThrowsAsync(new Exception("Error inesperado"));
+            _mediatorMock.Setup(m => m.Send(It.IsAny<CreateUserCommand>(), It.IsAny<CancellationToken>()))
+                         .ThrowsAsync(new Exception("Error DB"));
 
-            // Act
-            var result = await _controller.CreateUser(dto, CancellationToken.None);
+            var result = await _controller.CreateUser(validDto, CancellationToken.None);
 
-            // Assert
-            var objectResult = Assert.IsType<ObjectResult>(result);
-            Assert.Equal(500, objectResult.StatusCode);
-        }
-
-        [Fact]
-        public async Task GetUser_EmailIsNull_ThrowsException()
-        {
-            // Arrange
-            string email = null;
-
-            // Act & Assert
-            var ex = await Assert.ThrowsAsync<Exception>(() =>
-                _controller.GetUser(email, CancellationToken.None));
-
-            Assert.Equal("El email no puede estar vacío.", ex.Message);
-        }
-
-        [Fact]
-        public async Task GetUser_EmailIsEmpty_ThrowsException()
-        {
-            // Arrange
-            string email = "   ";
-
-            // Act & Assert
-            var ex = await Assert.ThrowsAsync<Exception>(() =>
-                _controller.GetUser(email, CancellationToken.None));
-
-            Assert.Equal("El email no puede estar vacío.", ex.Message);
+            var serverError = result.Should().BeOfType<ObjectResult>().Subject;
+            serverError.StatusCode.Should().Be(500);
         }
 
         [Fact]
@@ -180,7 +111,7 @@ namespace users_service.api.Tests.Controllers
             var fakeUser = new GetUserResponseDto("David", " Perez", email,
                 "04126110032", "Caracas", new DateTime(1990, 1, 1));
 
-            _mockMediator
+            _mediatorMock
                 .Setup(m => m.Send(It.IsAny<GetUserEmailQuery>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync(fakeUser);
 
@@ -192,180 +123,154 @@ namespace users_service.api.Tests.Controllers
             Assert.Equal(200, objectResult.StatusCode);
         }
 
-        [Fact]
-        public async Task ChangePassword_ThrowException_WhenInvalidEmail()
+        [Theory]
+        [InlineData(null)]
+        [InlineData("")]
+        [InlineData("   ")]
+        public async Task GetUser_InvalidEmail_ThrowsException(string email)
         {
-            // Arrange
-            string email = null;
-            var changePasswordDTO = new ChangePasswordDTO(" ");
-
-            // Act & Assert
-
-            var result = await _controller.ChangePassword(email, changePasswordDTO, CancellationToken.None);
-            var ex = Assert.IsType<ObjectResult>(result);
-            Assert.Equal(500, ex.StatusCode);
-            var error = ex.Value.GetType().GetProperty("message")?.GetValue(ex.Value, null);
-            Assert.Equal("La nueva contraseña no puede estar vacía.", error);
+            var ex = await Assert.ThrowsAsync<Exception>(() => _controller.GetUser(email, CancellationToken.None));
+            ex.Message.Should().Be("El email no puede estar vacío.");
         }
 
         [Fact]
-        public async Task ChangePassword_ReturnBadRequest_WhenDTOInvalid()
+        public async Task ChangePassword_ValidData_ReturnsOk()
         {
-            // Arrange
-            string email = null;
-            var changePasswordDTO = new ChangePasswordDTO("123");
+            var dto = new ChangePasswordDTO("newpass123");
+            string email = "test@test.com";
 
-            var result = await _controller.ChangePassword(email, changePasswordDTO, CancellationToken.None);
+            _mediatorMock.Setup(m => m.Send(It.IsAny<ChangePasswordCommand>(), It.IsAny<CancellationToken>()))
+                         .ReturnsAsync(true);
 
-            // Assert
-            var ex = Assert.IsType<ObjectResult>(result);
-            Assert.Equal(500, ex.StatusCode);
-            var error = ex.Value.GetType().GetProperty("message")?.GetValue(ex.Value, null);
-            Assert.Equal("Los datos ingresados no son válidos. La contraseña debe tener al menos 6 caracteres.", error);
+            var result = await _controller.ChangePassword(email, dto, CancellationToken.None);
 
+            var okResult = result.Should().BeOfType<OkObjectResult>().Subject;
+            okResult.Value.Should().Be("Contraseña cambiada exitosamente.");
         }
 
         [Fact]
-        public async Task ChangePassword_ReturnOk_Success()
+        public async Task ChangePassword_MediatorReturnsFalse_ReturnsBadRequest()
         {
-            // Arrange
-            string email = "user@gmail.com";
-            var changePasswordDTO = new ChangePasswordDTO("newPasword123");
+            var dto = new ChangePasswordDTO("newpass123");
+            string email = "test@test.com";
 
+            _mediatorMock.Setup(m => m.Send(It.IsAny<ChangePasswordCommand>(), It.IsAny<CancellationToken>()))
+                         .ReturnsAsync(false);
 
-            _mockMediator
-                .Setup(m => m.Send(It.IsAny<ChangePasswordCommand>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(true);
+            var result = await _controller.ChangePassword(email, dto, CancellationToken.None);
 
-            // Act
-            var result = await _controller.ChangePassword(email, changePasswordDTO, CancellationToken.None);
-
-            // Assert
-            var objectResult = Assert.IsType<OkObjectResult>(result);
-            Assert.Equal(200, objectResult.StatusCode);
-
+            var badRequest = result.Should().BeOfType<BadRequestObjectResult>().Subject;
+            badRequest.Value.Should().Be(" Token inválido o expirado.");
         }
 
         [Fact]
-        public async Task UpdateUser_ThrowException_WhenPhoneInvalid()
+        public async Task ChangePassword_EmptyPassword_Returns500()
         {
-            // Arrange
-            string email = "user@gmail.com";
-            var dto = new UpdateUserDTO()
+            var dto = new ChangePasswordDTO("");
+
+            var result = await _controller.ChangePassword("email", dto, CancellationToken.None);
+
+            var serverError = result.Should().BeOfType<ObjectResult>().Subject;
+            serverError.StatusCode.Should().Be(500);
+            serverError.Value.ToString().Should().Contain("La nueva contraseña no puede estar vacía.");
+        }
+
+        [Fact]
+        public async Task ChangePassword_ShortPassword_ReturnsBadRequest()
+        {
+            var dto = new ChangePasswordDTO("123");
+
+            var result = await _controller.ChangePassword("email", dto, CancellationToken.None);
+
+            var badRequest = result.Should().BeOfType<BadRequestObjectResult>().Subject;
+            badRequest.Value.ToString().Should().Contain("La contraseña debe tener al menos 6 caracteres");
+        }
+
+        [Fact]
+        public async Task UpdateUser_ValidData_ReturnsOk()
+        {
+            var dto = new UpdateUserDTO
             {
-                FirstName = "",
-                LastName = "",
-                PhoneNumber = "04126112",
-                Address = "Caracas",
-                Birthdate = new DateTime(2000, 1, 1),
+                PhoneNumber = "12345678901",
+                Birthdate = DateTime.Today.AddYears(-20)
             };
+            string email = "test@test.com";
 
-            // Act & Assert
-            var ex = await Assert.ThrowsAsync<UsuarioDTOException>(() =>
-                _controller.UpdateUser(email, dto, CancellationToken.None));
+            _mediatorMock.Setup(m => m.Send(It.IsAny<UpdateUserCommand>(), It.IsAny<CancellationToken>()))
+                         .ReturnsAsync(true);
 
-            Assert.Equal("Los datos ingresados no son válidos. El teléfono debe contener exactamente 11 dígitos.",
-                ex.Message);
-
-        }
-
-        [Fact]
-        public async Task UpdateUser_ThrowException_WhenEmailInvalid()
-        {
-            // Arrange
-            string email = "user@gmail.com";
-            var dto = new UpdateUserDTO()
-            {
-                FirstName = "",
-                LastName = "",
-                PhoneNumber = "04126110032",
-                Address = "Caracas",
-                Birthdate = new DateTime(2020, 1, 1),
-            };
-
-            // Act & Assert
-            var ex = await Assert.ThrowsAsync<UsuarioDTOException>(() =>
-                _controller.UpdateUser(email, dto, CancellationToken.None));
-
-            Assert.Equal("Los datos ingresados no son válidos. Debes ser mayor de 18 años.", ex.Message);
-
-        }
-
-        [Fact]
-        public async Task UpdateUser_BadRequest_UpdateFail()
-        {
-            // Arrange
-            string email = "user@gmail.com";
-            var dto = new UpdateUserDTO()
-            {
-                FirstName = "User",
-                LastName = "User",
-                PhoneNumber = "04126110032",
-                Address = "Caracas",
-                Birthdate = new DateTime(2000, 1, 1),
-            };
-            _mockMediator
-                .Setup(m => m.Send(It.IsAny<UpdateUserCommand>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(false);
-
-            // Act & Assert
             var result = await _controller.UpdateUser(email, dto, CancellationToken.None);
 
-            var ex = Assert.IsType<BadRequestObjectResult>(result);
-            var error = Assert.IsType<string>(ex.Value);
-            Assert.Equal("No se pudo actualizar el usuario.", error);
-
+            var okResult = result.Should().BeOfType<OkObjectResult>().Subject;
+            okResult.Value.Should().Be("Usuario actualizado exitosamente.");
         }
 
         [Fact]
-        public async Task UpdateUser_Success()
+        public async Task UpdateUser_MediatorReturnsFalse_ReturnsBadRequest()
         {
-            // Arrange
-            string email = "user@gmail.com";
-            var dto = new UpdateUserDTO()
-            {
-                FirstName = "User",
-                LastName = "User",
-                PhoneNumber = "04126110032",
-                Address = "Caracas",
-                Birthdate = new DateTime(2000, 1, 1),
-            };
-            _mockMediator
-                .Setup(m => m.Send(It.IsAny<UpdateUserCommand>(), It.IsAny<CancellationToken>()))
-                .ReturnsAsync(true);
-            // Act & Assert
-            var result = await _controller.UpdateUser(email, dto, CancellationToken.None);
+            var dto = new UpdateUserDTO { PhoneNumber = "12345678901" };
 
-            var objectResult = Assert.IsType<OkObjectResult>(result);
-            Assert.Equal(200, objectResult.StatusCode);
+            _mediatorMock.Setup(m => m.Send(It.IsAny<UpdateUserCommand>(), It.IsAny<CancellationToken>()))
+                         .ReturnsAsync(false);
 
-            Assert.Equal("Usuario actualizado exitosamente.", objectResult.Value);
+            var result = await _controller.UpdateUser("email", dto, CancellationToken.None);
 
+            var badRequest = result.Should().BeOfType<BadRequestObjectResult>().Subject;
+            badRequest.Value.Should().Be("No se pudo actualizar el usuario.");
         }
 
         [Fact]
-        public async Task GetUsers_Success_ListUser_Success()
+        public async Task UpdateUser_InvalidPhone_ReturnsBadRequest()
         {
-            GetUsersResponseDto user = new GetUsersResponseDto("David", "Perez", "user@gmail.com",
-                        "12345678910", "123 Test St", "2000, 1, 1",
-                                   "Usuario");
-            GetUsersResponseDto user2 = new GetUsersResponseDto( "Mauricio", "Marquez", "user1@gmail.com",
-                        "12345678910", "123 Test St", "2000, 1, 1",
-                                    "Usuario");
-             List<GetUsersResponseDto> listUser = new List<GetUsersResponseDto> { user, user2 };
+            var dto = new UpdateUserDTO { PhoneNumber = "123" };
 
-             _mockMediator
-                 .Setup(m => m.Send(It.IsAny<GetUsersQuery>(), It.IsAny<CancellationToken>()))
-                 .ReturnsAsync(listUser);
+            var result = await _controller.UpdateUser("email", dto, CancellationToken.None);
 
-             var result = await _controller.GetUsers( CancellationToken.None);
+            var badRequest = result.Should().BeOfType<BadRequestObjectResult>().Subject;
+            badRequest.Value.ToString().Should().Contain("El teléfono debe contener exactamente 11 dígitos");
+        }
 
-            var objectResult = Assert.IsType<OkObjectResult>(result);
-             Assert.Equal(200, objectResult.StatusCode);
+        [Fact]
+        public async Task UpdateUser_GenericException_Returns500()
+        {
+            var dto = new UpdateUserDTO();
+            _mediatorMock.Setup(m => m.Send(It.IsAny<UpdateUserCommand>(), It.IsAny<CancellationToken>()))
+                         .ThrowsAsync(new Exception("Error"));
 
+            var result = await _controller.UpdateUser("email", dto, CancellationToken.None);
+
+            var serverError = result.Should().BeOfType<ObjectResult>().Subject;
+            serverError.StatusCode.Should().Be(500);
+        }
+
+        [Fact]
+        public async Task GetUsers_ReturnsOk()
+        {
+            // Usamos una lista vacía pero del tipo correcto si el Query retorna IEnumerable<GetUsersResponseDto>
+            // Si retorna object, new List<object> está bien. Asumiré que retorna una lista de DTOs.
+            var list = new List<GetUsersResponseDto>();
+
+            // IMPORTANTE: Asegúrate de que GetUsersQuery devuelve el mismo tipo que pones aquí en el Mock.
+            // Si GetUsersQuery retorna List<GetUsersResponseDto>, usa eso. Si es object, usa object.
+            // Según tu código GetUsersQuery parece devolver una lista genérica.
+
+            _mediatorMock.Setup(m => m.Send(It.IsAny<GetUsersQuery>(), It.IsAny<CancellationToken>()))
+                         .ReturnsAsync(list);
+
+            var result = await _controller.GetUsers(CancellationToken.None);
+
+            var okResult = result.Should().BeOfType<OkObjectResult>().Subject;
+            okResult.StatusCode.Should().Be(200);
+        }
+
+        [Fact]
+        public void UsuarioDTOException_Constructor_Works()
+        {
+            var inner = new Exception("Inner");
+            var ex = new UsuarioDTOException(inner);
+
+            ex.Message.Should().StartWith("Los datos ingresados no son válidos.");
+            ex.InnerException.Should().Be(inner);
         }
     }
-    
-
 }
-

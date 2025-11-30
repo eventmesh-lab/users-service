@@ -12,25 +12,30 @@ using System.Threading.Tasks;
 
 namespace users_service.application.Commands.Handlers
 {
+    /// Handler para el comando ChangePasswordCommand.
     public class ChangePasswordHandler : IRequestHandler<ChangePasswordCommand, bool>
     {
         public readonly IMediator _mediator;
         public readonly IUserServices _userServices;
         public readonly IKeycloakRepository _usuarioKeycloakRepository;
+
+        /// Inicializa una nueva instancia del handler.
         public ChangePasswordHandler(IUserServices userServices, IKeycloakRepository usuarioKeycloakRepository)
         {
             _userServices = userServices;
             _usuarioKeycloakRepository = usuarioKeycloakRepository;
         }
+        /// Maneja el comando CrearEventoCommand.
         public async Task<bool> Handle(ChangePasswordCommand request, CancellationToken cancellationToken)
         {
-
+            // Validar si el usuario existe
             var user = await _userServices.GetUserByEmailServices(request.Email, cancellationToken);
             if (user == null)
             {
                 throw new ApplicationException($"El usuario {request.Email} no existe en la base de datos.");
             }
-            try { 
+            try {
+                // Persistir la nueva contraseña en Keycloak
                 var userId = await _usuarioKeycloakRepository.GetUserIdByUsernameAsyncRepo(request.Email);
                 Console.WriteLine($"UserId obtenido de Keycloak: {userId}");
                 await _usuarioKeycloakRepository.ChangePasswordAsyncRepo(request.Email, request.ChangePasswordDto.NewPassword);

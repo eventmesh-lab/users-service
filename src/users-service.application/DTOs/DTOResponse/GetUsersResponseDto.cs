@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace users_service.application.DTOs.DTOResponse
 {
+    /// DTO de respuesta para representar un usuario con todos sus datos en las respuestas de la API.
     public class GetUsersResponseDto
     {
         public string FirstName { get; set; }

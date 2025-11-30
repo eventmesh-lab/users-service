@@ -11,13 +11,16 @@ using System.Threading.Tasks;
 
 namespace users_service.application.Queries.Handlers
 {
+    /// Handler para el comando GetUserEmailQuery.
     public class GetUserByEmailHandler : IRequestHandler<GetUserEmailQuery, GetUserResponseDto>
     {
         public readonly IUserServices _userServices;
+        /// Inicializa una nueva instancia del handler.
         public GetUserByEmailHandler(IUserServices userServices)
         {
             _userServices = userServices;
         }
+        /// Maneja el comando GetUserEmailQuery.
         public async Task<GetUserResponseDto> Handle(GetUserEmailQuery request, CancellationToken cancellationToken)
         {
             var userRegistered = await _userServices.GetUserByEmailServices(request.Email, cancellationToken);

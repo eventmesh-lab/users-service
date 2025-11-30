@@ -40,6 +40,10 @@ namespace users_service.api.Controllers
                 var response = await _mediator.Send(command, cancellationToken);
                 return Ok(new { Usuario = response, Mensaje = "Usuario registrado exitosamente." });
             }
+            catch (UsuarioDTOException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
             catch (Exception ex)
             {
                 return StatusCode(500, new { message =  ex.Message });
@@ -83,6 +87,10 @@ namespace users_service.api.Controllers
                 var response = await _mediator.Send(new ChangePasswordCommand(email, changePasswordDTO));
                 return response ? Ok("Contraseña cambiada exitosamente.") : BadRequest(" Token inválido o expirado.");
             }
+            catch (UsuarioDTOException ex)
+            {
+                return BadRequest(new { message = ex.Message });
+            }
             catch (Exception ex)
             {
                 return StatusCode(500, new { message = ex.Message });
@@ -92,23 +100,34 @@ namespace users_service.api.Controllers
         [HttpPut("updateUser/{email}")]
         public async Task<IActionResult> UpdateUser(string email, [FromBody] UpdateUserDTO updateUserDTO, CancellationToken cancellationToken)
         {
-             var validator = new UpdateUserDTOValidator();
-             var resultado = validator.Validate(updateUserDTO);
-             if (!resultado.IsValid)
-             {
-                 var errores = string.Join("; ", resultado.Errors.Select(e => e.ErrorMessage));
-                 throw new UsuarioDTOException(new Exception(errores));
-             }
+            try
+            {
+                var validator = new UpdateUserDTOValidator();
+                var resultado = validator.Validate(updateUserDTO);
+                if (!resultado.IsValid)
+                {
+                    var errores = string.Join("; ", resultado.Errors.Select(e => e.ErrorMessage));
+                    throw new UsuarioDTOException(new Exception(errores));
+                }
 
-            var command = new UpdateUserCommand(email, updateUserDTO);
-            var response = await _mediator.Send(command, cancellationToken);
-            if (response)
-            {
-                return Ok("Usuario actualizado exitosamente.");
+                var command = new UpdateUserCommand(email, updateUserDTO);
+                var response = await _mediator.Send(command, cancellationToken);
+                if (response)
+                {
+                    return Ok("Usuario actualizado exitosamente.");
+                }
+                else
+                {
+                    return BadRequest("No se pudo actualizar el usuario.");
+                }
             }
-            else
+            catch (UsuarioDTOException ex)
             {
-                return BadRequest("No se pudo actualizar el usuario.");
+                return BadRequest(new { message = ex.Message });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { message = ex.Message });
             }
         }
 

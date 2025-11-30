@@ -12,6 +12,7 @@ using users_service.infrastructure.Persistence.Models;
 
 namespace users_service.infrastructure.Persistence.Configurations
 {
+    /// Configuración de la entidad UserPostgres para Entity Framework Core.
     public class UserConfiguration : IEntityTypeConfiguration<UserPostgres>
     {
         public void Configure(EntityTypeBuilder<UserPostgres> builder)

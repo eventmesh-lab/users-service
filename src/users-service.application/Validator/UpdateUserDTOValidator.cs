@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace users_service.application.Validator
 {
+    /// Validador para el DTO de actualización de usuario.
     public class UpdateUserDTOValidator :AbstractValidator<UpdateUserDTO>
     {
         public UpdateUserDTOValidator()
@@ -23,6 +24,7 @@ namespace users_service.application.Validator
                 .Must(date => date == null || CalculateAge(date.Value) >= 18)
                     .WithMessage("Debes ser mayor de 18 años.");
         }
+        /// Calcula la edad basada en la fecha de nacimiento.
         private int CalculateAge(DateTime birthdate)
         {
             var today = DateTime.Today;
