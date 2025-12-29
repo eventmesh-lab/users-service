@@ -1,6 +1,6 @@
 ﻿using users_service.application.Commands.Commands;
 using users_service.application.DTOs.DTOResponse;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.application.Mappers;
 using users_service.domain.Entities;
 using MediatR;
@@ -32,7 +32,7 @@ namespace users_service.application.Commands.Handlers
             var user = UserMapperApp.ToDomain(request);
 
             // Valida que no exista un usuario con el mismo email
-            if (_userServices.GetUserByEmailServices(request.UserCreateDTO.Email, cancellationToken).Result != null)
+            if (_userServices.GetUserByEmail(request.UserCreateDTO.Email, cancellationToken).Result != null)
             {
                 throw new ApplicationException($"El usuario con email {user.Email} ya existe en la base de datos.");
             }
@@ -56,7 +56,7 @@ namespace users_service.application.Commands.Handlers
             catch (Exception ex)
             {
                 // Si falla el registro en keycloak, eliminar el usuario de postgres
-                await _userServices.DeleteUserByEmailServices(request.UserCreateDTO.Email, cancellationToken);
+                await _userServices.DeleteUserByEmail(request.UserCreateDTO.Email, cancellationToken);
                 throw new ApplicationException($"No se pudo registar el usuario en keycloak", ex);
             }
             Console.WriteLine("Usuario registrado en Keycloak.");
