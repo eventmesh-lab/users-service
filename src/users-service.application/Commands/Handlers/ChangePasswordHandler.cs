@@ -1,8 +1,7 @@
 ﻿using users_service.application.Commands.Commands;
 using users_service.application.DTOs.DTOResponse;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.domain.Entities;
-using users_service.application.Services;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -29,7 +28,7 @@ namespace users_service.application.Commands.Handlers
         public async Task<bool> Handle(ChangePasswordCommand request, CancellationToken cancellationToken)
         {
             // Validar si el usuario existe
-            var user = await _userServices.GetUserByEmailServices(request.Email, cancellationToken);
+            var user = await _userServices.GetUserByEmail(request.Email, cancellationToken);
             if (user == null)
             {
                 throw new ApplicationException($"El usuario {request.Email} no existe en la base de datos.");

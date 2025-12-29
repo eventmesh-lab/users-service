@@ -1,6 +1,6 @@
 ﻿using users_service.application.Commands.Commands;
 using users_service.application.DTOs.DTOResponse;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.application.Mappers;
 using users_service.domain.Entities;
 using MediatR;
@@ -28,7 +28,7 @@ namespace users_service.application.Commands.Handlers
         public async Task<bool> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {
             // Validar si el usuario existe
-            var oldUser = await _userServices.GetUserByEmailServices(request.Email, cancellationToken);
+            var oldUser = await _userServices.GetUserByEmail(request.Email, cancellationToken);
             
             if (oldUser == null)
             {
@@ -40,7 +40,7 @@ namespace users_service.application.Commands.Handlers
                 // Mapear comando a entidades del dominio
                 var newUser = UserMapperApp.UpdateUserToDomain(request.UpdateUserDTO, oldUser);
                 // Persistir actualizacion de usuario en postgresql
-                var result = await _userServices.UpdateUserServices(request.Email, newUser);
+                var result = await _userServices.UpdateUser(request.Email, newUser);
 
                 try
                 {
@@ -53,7 +53,7 @@ namespace users_service.application.Commands.Handlers
                 }
                 catch (Exception ex)
                 {
-                    await _userServices.UpdateUserServices(request.Email, oldUser);
+                    await _userServices.UpdateUser(request.Email, oldUser);
                     throw new ApplicationException($"No se pudo actualizar el usuario en keyclaok", ex);
                 }
 

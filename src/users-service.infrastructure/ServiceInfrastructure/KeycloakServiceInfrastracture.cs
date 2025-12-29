@@ -9,7 +9,7 @@ namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
 {
 
     /// Implementación del servicio de Keycloak para la gestión de usuarios.
-    public class KeycloakServiceInfrastracture : IKeycloakServiceInfrastructure
+    public class KeycloakServiceInfrastracture : IKeycloakRepository
     {
         private readonly HttpClient _httpClient;
         private readonly IConfiguration _config;
@@ -49,8 +49,8 @@ namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
             return _accessToken!;
         }
 
-        /// Crea un nuevo usuario en Keycloak.
-        public async Task CreateUserAsync(string email, string name, string lastname, string password)
+        /// Registra un nuevo usuario en Keycloak.
+        public async Task RegisterUserAsyncRepo(string email, string name, string lastname, string password)
         {
             var token = await GetAdminTokenAsync();
             Console.WriteLine($"T es {token}");
@@ -152,7 +152,7 @@ namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
 
 
         /// Asigna un rol de realm a un usuario en Keycloak.
-        public async Task AssignRealmRoleToUserAsync(string username, string roleName)
+        public async Task AssignRealmRoleToUserAsyncRepo(string username, string roleName)
         {
             var token = await GetAdminTokenAsync();
             
@@ -174,9 +174,9 @@ namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
             Console.WriteLine($" Rol '{roleName}' asignado exitosamente al usuario '{username}'.");
         }
         /// Cambia la contraseña de un usuario en Keycloak.
-        public async Task ChangePasswordAsync( string email, string newPassword)
+        public async Task ChangePasswordAsyncRepo( string email, string newPassword)
         {
-            var userId = await GetUserIdByUsernameAsync(email);
+            var userId = await GetUserIdByUsernameAsyncRepo(email);
             var accessToken = await GetAdminTokenAsync();
             var url = $"http://keycloak:8080/admin/realms/{_config["Keycloak:UserRealm"]}/users/{userId}/reset-password";
 
@@ -206,7 +206,7 @@ namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
         }
 
         /// Obtiene el ID de un usuario en Keycloak por su nombre de usuario.
-        public async Task<string> GetUserIdByUsernameAsync(string username)
+        public async Task<string> GetUserIdByUsernameAsyncRepo(string username)
         {
             var accessToken = await GetAdminTokenAsync();
             var realm = _config["Keycloak:UserRealm"];
@@ -229,11 +229,11 @@ namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
         }
 
         /// Actualiza un usuario en Keycloak.
-        public async Task<bool> UpdateUserInKeycloakAsync(string oldEmail, string newName, string newLastname)
+        public async Task<bool> UpdateUserInKeycloakAsyncRepo(string oldEmail, string newName, string newLastname)
         {
             using var httpClient = new HttpClient();
             var tokenAdmin = await GetAdminTokenAsync();
-            var userId = await GetUserIdByUsernameAsync(oldEmail);
+            var userId = await GetUserIdByUsernameAsyncRepo(oldEmail);
             var baseUrl = "http://keycloak:8080";
             string url = $"{baseUrl}/admin/realms/{_config["Keycloak:UserRealm"]}/users/{userId}";
             var body = new
