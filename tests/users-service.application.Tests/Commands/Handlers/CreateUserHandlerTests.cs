@@ -16,13 +16,15 @@ namespace users_service.application.Tests.Commands.Handlers
     {
         private readonly Mock<IUserServices> _userServicesMock;
         private readonly Mock<IKeycloakRepository> _keycloakRepoMock;
+        private readonly Mock<IActivityService> _activityServiceMock;
         private readonly CreateUserHandler _handler;
 
         public CreateUserHandlerTests()
         {
             _userServicesMock = new Mock<IUserServices>();
             _keycloakRepoMock = new Mock<IKeycloakRepository>();
-            _handler = new CreateUserHandler(_userServicesMock.Object, _keycloakRepoMock.Object);
+            _activityServiceMock = new Mock<IActivityService>();
+            _handler = new CreateUserHandler(_userServicesMock.Object, _activityServiceMock.Object, _keycloakRepoMock.Object);
         }
 
         private CreateUserCommand BuildCommand() =>
