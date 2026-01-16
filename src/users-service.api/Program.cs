@@ -1,17 +1,17 @@
-using users_service.application.Commands.Commands;
-using users_service.application.Interfaces;
-using users_service.application.Queries.Queries;
-using users_service.domain.Interfaces;
-using users_service.infrastructure.Persistence.Context;
-using users_service.infrastructure.Persistence.Repositories;
-using users_service.application.Services;
-using MicroserviciosUsuarios.Infrastructure.Repositories.Keycloak;
 using MicroservicioUsuarios.Infrastructure.ServicesInfrastracture;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.CodeAnalysis.FlowAnalysis;
 using Microsoft.EntityFrameworkCore;
 using System.Configuration;
+using users_service.application;
+using users_service.application.Commands.Commands;
+using users_service.application.Queries.Queries;
+using users_service.domain.Interfaces;
+using users_service.domain.Interfaces;
+using users_service.infrastructure.Persistence.Context;
+using users_service.infrastructure.Persistence.Repositories;
+using users_service.infrastructure.ServiceInfrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,11 +37,15 @@ builder.Services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(connectionString,
             b => b.MigrationsAssembly("users-service.infrastructure")));
 
+builder.Services.AddHttpClient<IActivityService, ActivityService>(client =>
+{
+    client.BaseAddress = new Uri("http://host.docker.internal:7182/");
+    client.DefaultRequestHeaders.Add("Accept", "application/json");
+});
+
 //Inyeccion de dependencias
-builder.Services.AddScoped<IUserRepositoryPostgres,UserRepositoyPostgres>();
-builder.Services.AddScoped<IUserServices, UserServices>();
-builder.Services.AddScoped<IKeycloakRepository, KeycloakRepository>();
-builder.Services.AddScoped<IKeycloakServiceInfrastructure, KeycloakServiceInfrastracture>();
+builder.Services.AddScoped<IUserServices, UserRepositoyPostgres>();
+builder.Services.AddScoped<IKeycloakRepository, KeycloakServiceInfrastracture>();
 builder.Services.AddHttpClient<KeycloakServiceInfrastracture>();
 
 // MediatR Configuration
@@ -49,7 +53,9 @@ builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(
     typeof(CreateUserCommand).Assembly ,
     typeof(GetUserEmailQuery).Assembly,
     typeof(ChangePasswordCommand).Assembly,
-    typeof(UpdateUserCommand).Assembly
+    typeof(UpdateUserCommand).Assembly,
+    typeof(GetUsersQuery).Assembly,
+    typeof(GetIdByEmailQuery).Assembly
    /* typeof(UpdateRolePermissionCommand).Assembly)*/));
 
 builder.Services.AddControllers();

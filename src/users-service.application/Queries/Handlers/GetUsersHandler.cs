@@ -1,5 +1,5 @@
 ﻿using users_service.application.DTOs.DTOResponse;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.application.Mappers;
 using users_service.application.Queries.Queries;
 using MediatR;
@@ -23,7 +23,7 @@ namespace users_service.application.Queries.Handlers
         /// Maneja el comando GetUsersQuery.
         public async Task<List<GetUsersResponseDto>> Handle(GetUsersQuery request, CancellationToken cancellationToken)
         {
-            var usersRegistered = await _userServices.GetAllUsersServices( cancellationToken);
+            var usersRegistered = await _userServices.GetAllUsersAsync( cancellationToken);
 
             if (usersRegistered == null)
             {

@@ -1,6 +1,6 @@
 ﻿using users_service.application.Commands.Commands;
 using users_service.application.DTOs.DTOResponse;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.application.Mappers;
 using users_service.domain.Entities;
 using MediatR;
@@ -18,17 +18,19 @@ namespace users_service.application.Commands.Handlers
         public readonly IMediator _mediator;
         public readonly IUserServices _userServices;
         public readonly IKeycloakRepository _usuarioKeycloakRepository;
+        private readonly IActivityService _activityService;
         /// Inicializa una nueva instancia del handler.
-        public UpdateUserHandler(IUserServices userServices, IKeycloakRepository usuarioKeycloakRepository)
+        public UpdateUserHandler(IUserServices userServices,IActivityService activityService, IKeycloakRepository usuarioKeycloakRepository)
         {
             _userServices = userServices;
             _usuarioKeycloakRepository = usuarioKeycloakRepository;
+            _activityService = activityService;
         }
         /// Maneja el comando UpdateUserCommand.
         public async Task<bool> Handle(UpdateUserCommand request, CancellationToken cancellationToken)
         {
             // Validar si el usuario existe
-            var oldUser = await _userServices.GetUserByEmailServices(request.Email, cancellationToken);
+            var oldUser = await _userServices.GetUserByEmail(request.Email, cancellationToken);
             
             if (oldUser == null)
             {
@@ -40,7 +42,7 @@ namespace users_service.application.Commands.Handlers
                 // Mapear comando a entidades del dominio
                 var newUser = UserMapperApp.UpdateUserToDomain(request.UpdateUserDTO, oldUser);
                 // Persistir actualizacion de usuario en postgresql
-                var result = await _userServices.UpdateUserServices(request.Email, newUser);
+                var result = await _userServices.UpdateUser(request.Email, newUser);
 
                 try
                 {
@@ -49,11 +51,16 @@ namespace users_service.application.Commands.Handlers
                         // Persistir actualizacion de usuario en keycloak si el nombre o apellido cambiaron
                         var userInKeyclaok = await _usuarioKeycloakRepository.UpdateUserInKeycloakAsyncRepo(request.Email, newUser.FirstName, newUser.LastName);
                     }
+                    await _activityService.RegisterActivityAsync(
+                        email: request.Email,
+                        action: $"Actualización de usuario registrada",
+                        category: "Usuario"
+                    );
                     return result == System.Net.HttpStatusCode.OK;
                 }
                 catch (Exception ex)
                 {
-                    await _userServices.UpdateUserServices(request.Email, oldUser);
+                    await _userServices.UpdateUser(request.Email, oldUser);
                     throw new ApplicationException($"No se pudo actualizar el usuario en keyclaok", ex);
                 }
 
@@ -63,7 +70,6 @@ namespace users_service.application.Commands.Handlers
                 throw new ApplicationException($"No se pudo actualizar el usuario en la base de datos", ex);
             }
         }
-
 
     }
 }

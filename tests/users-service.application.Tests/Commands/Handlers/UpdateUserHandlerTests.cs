@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using users_service.application.Commands.Commands;
 using users_service.application.Commands.Handlers;
 using users_service.application.DTOs;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.domain.Entities;
 using users_service.domain.ValueObjects;
 
@@ -38,7 +38,7 @@ namespace users_service.application.Tests.Commands.Handlers
         [Fact]
         public async Task Handle_ShouldThrow_WhenUserNotExists()
         {
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(command.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(command.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync((User)null);
 
             var ex = await Assert.ThrowsAsync<ApplicationException>(() => _handler.Handle(command, CancellationToken.None));
@@ -48,9 +48,9 @@ namespace users_service.application.Tests.Commands.Handlers
         [Fact]
         public async Task Handle_ShouldThrow_WhenAddUserPostgresFails()
         {
-            var oldUser= _userServicesMock.Setup(s => s.GetUserByEmailServices(command.Email, It.IsAny<CancellationToken>()))
+            var oldUser= _userServicesMock.Setup(s => s.GetUserByEmail(command.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new User());
-             _userServicesMock.Setup(s => s.UpdateUserServices(command.Email,It.IsAny<User>()))
+             _userServicesMock.Setup(s => s.UpdateUser(command.Email,It.IsAny<User>()))
                 .ThrowsAsync(new Exception("DB error"));
 
             var ex = await Assert.ThrowsAsync<ApplicationException>(() => _handler.Handle(command, CancellationToken.None));
@@ -60,9 +60,9 @@ namespace users_service.application.Tests.Commands.Handlers
         [Fact]
         public async Task Handle_ShouldThrow_WhenAddUserKeyclaokFails()
         {
-            var oldUser = _userServicesMock.Setup(s => s.GetUserByEmailServices(command.Email, It.IsAny<CancellationToken>()))
+            var oldUser = _userServicesMock.Setup(s => s.GetUserByEmail(command.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new User());
-            _userServicesMock.Setup(s => s.UpdateUserServices(command.Email, It.IsAny<User>()))
+            _userServicesMock.Setup(s => s.UpdateUser(command.Email, It.IsAny<User>()))
                 .ReturnsAsync(HttpStatusCode.OK);
             _keycloakRepoMock.Setup(s => s.UpdateUserInKeycloakAsyncRepo(command.Email,command.UpdateUserDTO.FirstName,command.UpdateUserDTO.LastName))
                 .ThrowsAsync(new Exception("DB error"));
@@ -72,9 +72,9 @@ namespace users_service.application.Tests.Commands.Handlers
         [Fact]
         public async Task Handle_True_Success()
         {
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(command.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(command.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new User());
-            _userServicesMock.Setup(s => s.UpdateUserServices(command.Email, It.IsAny<User>()))
+            _userServicesMock.Setup(s => s.UpdateUser(command.Email, It.IsAny<User>()))
                 .ReturnsAsync(HttpStatusCode.OK);
             _keycloakRepoMock.Setup(s => s.UpdateUserInKeycloakAsyncRepo(command.Email, command.UpdateUserDTO.FirstName, command.UpdateUserDTO.LastName))
                 .ReturnsAsync(true);
@@ -94,9 +94,9 @@ namespace users_service.application.Tests.Commands.Handlers
                 Address = "Caracas",
                 Birthdate = new DateTime(1990, 1, 1)
             });
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(request.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(request.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new User());
-            _userServicesMock.Setup(s => s.UpdateUserServices(request.Email, It.IsAny<User>()))
+            _userServicesMock.Setup(s => s.UpdateUser(request.Email, It.IsAny<User>()))
                 .ReturnsAsync(HttpStatusCode.OK);
             _keycloakRepoMock.Setup(s => s.UpdateUserInKeycloakAsyncRepo(request.Email, request.UpdateUserDTO.FirstName, request.UpdateUserDTO.LastName))
                 .ReturnsAsync(true);

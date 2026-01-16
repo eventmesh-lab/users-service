@@ -7,7 +7,7 @@ using Moq;
 using users_service.application.Commands.Commands;
 using users_service.application.Commands.Handlers;
 using users_service.application.DTOs;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.domain.Entities;
 
 namespace users_service.application.Tests.Commands.Handlers
@@ -42,7 +42,7 @@ namespace users_service.application.Tests.Commands.Handlers
         public async Task Handle_ShouldThrow_WhenUserAlreadyExists()
         {
             var command = BuildCommand();
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(command.UserCreateDTO.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(command.UserCreateDTO.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new User());
 
             var ex = await Assert.ThrowsAsync<ApplicationException>(() => _handler.Handle(command, CancellationToken.None));
@@ -53,7 +53,7 @@ namespace users_service.application.Tests.Commands.Handlers
         public async Task Handle_ShouldThrow_WhenAddUserFails()
         {
             var command = BuildCommand();
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(command.UserCreateDTO.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(command.UserCreateDTO.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync((User)null);
 
             _userServicesMock.Setup(s => s.AddUserPostgres(It.IsAny<User>(), It.IsAny<CancellationToken>()))
@@ -65,7 +65,7 @@ namespace users_service.application.Tests.Commands.Handlers
         public async Task Handle_ShouldThrow_WhenAddUserKeycloakFails()
         {
             var command = BuildCommand();
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(command.UserCreateDTO.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(command.UserCreateDTO.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync((User)null);
 
             _userServicesMock.Setup(s => s.AddUserPostgres(It.IsAny<User>(), It.IsAny<CancellationToken>()))
@@ -80,14 +80,14 @@ namespace users_service.application.Tests.Commands.Handlers
         public async Task Handle_ShouldThrow_WhenAddRoleFails()
         {
             var command = BuildCommand();
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(command.UserCreateDTO.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(command.UserCreateDTO.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync((User)null);
 
             _userServicesMock.Setup(s => s.AddUserPostgres(It.IsAny<User>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.CompletedTask);
             _keycloakRepoMock.Setup(s => s.RegisterUserAsyncRepo(command.UserCreateDTO.Email, command.UserCreateDTO.FirstName,
                     command.UserCreateDTO.LastName, command.UserCreateDTO.Password))
-                    .ReturnsAsync(true);
+                    .Returns(Task.CompletedTask);
             _keycloakRepoMock.Setup(s => s.AssignRealmRoleToUserAsyncRepo(command.UserCreateDTO.Email, command.UserCreateDTO.RoleUser))
                 .ThrowsAsync(new Exception("DB error"));
             await Assert.ThrowsAsync<ApplicationException>(() => _handler.Handle(command, CancellationToken.None));
@@ -96,16 +96,16 @@ namespace users_service.application.Tests.Commands.Handlers
         public async Task Handle_CreateUserResponseDto_Success()
         {
             var command = BuildCommand();
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(command.UserCreateDTO.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(command.UserCreateDTO.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync((User)null);
 
             _userServicesMock.Setup(s => s.AddUserPostgres(It.IsAny<User>(), It.IsAny<CancellationToken>()))
                 .Returns(Task.CompletedTask);
             _keycloakRepoMock.Setup(s => s.RegisterUserAsyncRepo(command.UserCreateDTO.Email, command.UserCreateDTO.FirstName,
                     command.UserCreateDTO.LastName, command.UserCreateDTO.Password))
-                .ReturnsAsync(true);
+                .Returns(Task.CompletedTask);
             _keycloakRepoMock.Setup(s => s.AssignRealmRoleToUserAsyncRepo(command.UserCreateDTO.Email, command.UserCreateDTO.RoleUser))
-                .ReturnsAsync(true);
+                .Returns(Task.CompletedTask);
             var result = await _handler.Handle(command, CancellationToken.None);
              Assert.Equal(result.FullName, command.UserCreateDTO.FirstName+" "+command.UserCreateDTO.LastName);
         }

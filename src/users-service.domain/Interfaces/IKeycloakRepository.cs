@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace users_service.application.Interfaces
+namespace users_service.domain.Interfaces
 {
     /// Interfaz del repositorio de keycloak.
     public interface IKeycloakRepository
     {
         /// Registra un usaurio en keycloak.
-        Task<bool> RegisterUserAsyncRepo(string email, string name, string lastname, string password);
+        Task RegisterUserAsyncRepo(string email, string name, string lastname, string password);
         /// Asigna un rol a un usuario en keycloak.
-        Task<bool> AssignRealmRoleToUserAsyncRepo(string email, string rol);
+        Task AssignRealmRoleToUserAsyncRepo(string username, string roleName);
         //Cambia la contraseña de un usuario en keycloak.
         Task ChangePasswordAsyncRepo(string email, string newPassword);
         //Consigue el Id de un usuario en keycloak a partir de su username (email).

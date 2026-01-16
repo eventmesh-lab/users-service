@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using users_service.application.Commands.Commands;
 using users_service.application.Commands.Handlers;
 using users_service.application.DTOs;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.application.Queries.Handlers;
 using users_service.application.Queries.Queries;
 using users_service.domain.Entities;
@@ -33,7 +33,7 @@ namespace users_service.application.Tests.Queries.Handlers
         [Fact]
         public async Task Handle_ShouldThrow_WhenUserNotExists()
         {
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(query.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(query.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync((User)null);
 
             var ex = await Assert.ThrowsAsync<ApplicationException>(() => _handler.Handle(query, CancellationToken.None));
@@ -42,7 +42,7 @@ namespace users_service.application.Tests.Queries.Handlers
         [Fact]
         public async Task Handle_GetUserResponseDto_Success()
         {
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(query.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(query.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(user);
 
             var response = await _handler.Handle(query, CancellationToken.None);

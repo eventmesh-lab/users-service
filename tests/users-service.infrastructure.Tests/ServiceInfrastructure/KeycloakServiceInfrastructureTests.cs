@@ -422,7 +422,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
                 });
 
             // Act
-            var result = await _sut.GetUserIdByUsernameAsync(username);
+            var result = await _sut.GetUserIdByUsernameAsyncRepo(username);
 
             // Assert
             Assert.Equal(expectedUserId, result);
@@ -447,7 +447,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
                 });
 
             // Act
-            var result = await _sut.GetUserIdByUsernameAsync("cualquiera");
+            var result = await _sut.GetUserIdByUsernameAsyncRepo("cualquiera");
 
             // Assert
             Assert.Null(result);
@@ -472,7 +472,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
             // Act & Assert
             // Como GetUserId llama a GetAdminToken, la excepción subirá
             await Assert.ThrowsAsync<HttpRequestException>(() =>
-                _sut.GetUserIdByUsernameAsync("usuario"));
+                _sut.GetUserIdByUsernameAsyncRepo("usuario"));
         }
 
         [Fact]
@@ -495,10 +495,10 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
 
             // Act
             // Llamada 1: Debería pedir el token vía HTTP
-            await _sut.GetUserIdByUsernameAsync("user1");
+            await _sut.GetUserIdByUsernameAsyncRepo("user1");
 
             // Llamada 2: Debería reusar el token en memoria (cache)
-            await _sut.GetUserIdByUsernameAsync("user2");
+            await _sut.GetUserIdByUsernameAsyncRepo("user2");
 
             // Assert
             // Verificamos que el POST (solicitud de token) se hizo EXACTAMENTE 1 VEZ
@@ -536,7 +536,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
 
             // Act
             // No esperamos retorno, solo que no falle
-            await _sut.CreateUserAsync(email, "Juan", "Perez", "123456");
+            await _sut.RegisterUserAsyncRepo(email, "Juan", "Perez", "123456");
 
             // Assert
             // Verificamos que se llamó al endpoint de usuarios con el JSON correcto
@@ -574,7 +574,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
 
             // Act & Assert
             var ex = await Assert.ThrowsAsync<Exception>(() =>
-                _sut.CreateUserAsync("test@test.com", "A", "B", "pass"));
+                _sut.RegisterUserAsyncRepo("test@test.com", "A", "B", "pass"));
 
             // Verificamos que la excepción contiene el mensaje de error de Keycloak
             Assert.Contains("Failed to create user", ex.Message);
@@ -600,7 +600,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
             // Act & Assert
             // Esto fallará antes de intentar crear el usuario, dentro de GetAdminTokenAsync
             await Assert.ThrowsAsync<HttpRequestException>(() =>
-                _sut.CreateUserAsync("test@test.com", "A", "B", "pass"));
+                _sut.RegisterUserAsyncRepo("test@test.com", "A", "B", "pass"));
         }
 
         [Fact]
@@ -629,7 +629,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
                 "", HttpMethod.Post, HttpStatusCode.NoContent);
 
             // Act
-            await _sut.AssignRealmRoleToUserAsync(username, roleName);
+            await _sut.AssignRealmRoleToUserAsyncRepo(username, roleName);
 
             // Assert
             // Verificamos que se hayan realizado las 4 llamadas
@@ -691,7 +691,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
 
             // Act & Assert
             // Ahora sí esperamos "Exception" exactamente
-            var ex = await Assert.ThrowsAsync<Exception>(() => _sut.AssignRealmRoleToUserAsync(username, "rol"));
+            var ex = await Assert.ThrowsAsync<Exception>(() => _sut.AssignRealmRoleToUserAsyncRepo(username, "rol"));
             Assert.Contains($"Usuario '{username}' no encontrado", ex.Message);
         }
         [Fact]
@@ -713,7 +713,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
                 JsonSerializer.Serialize(new[] { new { name = "otro-rol", id = "999" } }));
 
             // Act & Assert
-            var ex = await Assert.ThrowsAsync<Exception>(() => _sut.AssignRealmRoleToUserAsync("algo", roleName));
+            var ex = await Assert.ThrowsAsync<Exception>(() => _sut.AssignRealmRoleToUserAsyncRepo("algo", roleName));
             Assert.Contains($"Rol '{roleName}' no encontrado", ex.Message);
         }
 
@@ -745,7 +745,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
             using (var sw = new StringWriter())
             {
                 Console.SetOut(sw);
-                await _sut.ChangePasswordAsync("test@test.com", "newPass123");
+                await _sut.ChangePasswordAsyncRepo("test@test.com", "newPass123");
                 var output = sw.ToString();
 
                 // Assert
@@ -783,7 +783,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
             using (var sw = new StringWriter())
             {
                 Console.SetOut(sw);
-                await _sut.ChangePasswordAsync("test@test.com", "weak");
+                await _sut.ChangePasswordAsyncRepo("test@test.com", "weak");
                 var output = sw.ToString();
 
                 // Assert
@@ -810,7 +810,7 @@ namespace users_service.infrastructure.Tests.ServiceInfrastructure
 
             // Act & Assert
             var ex = await Assert.ThrowsAsync<ApplicationException>(() =>
-                _sut.UpdateUserInKeycloakAsync("email", "nom", "ape"));
+                _sut.UpdateUserInKeycloakAsyncRepo("email", "nom", "ape"));
 
             Assert.Contains("No se pudo actualizar el usuario", ex.Message);
         }
