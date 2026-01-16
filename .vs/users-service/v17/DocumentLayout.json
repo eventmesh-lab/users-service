@@ -1,34 +1,33 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\",
+  "WorkspaceRootPath": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\users-service.api\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{ED41C404-3C0C-454B-B06E-34BD841A4A01}|tests\\users-service.infrastructure.Tests\\users-service.infrastructure.Tests.csproj|c:\\users\\adbla\\documents\\github\\users-service\\tests\\users-service.infrastructure.tests\\serviceinfrastructure\\activityservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{ED41C404-3C0C-454B-B06E-34BD841A4A01}|tests\\users-service.infrastructure.Tests\\users-service.infrastructure.Tests.csproj|solutionrelative:tests\\users-service.infrastructure.tests\\serviceinfrastructure\\activityservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3968163C-CC2A-03F7-7962-81C76797AD99}|src\\users-service.infrastructure\\users-service.infrastructure.csproj|c:\\users\\adbla\\documents\\github\\users-service\\src\\users-service.infrastructure\\serviceinfrastructure\\activityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3968163C-CC2A-03F7-7962-81C76797AD99}|src\\users-service.infrastructure\\users-service.infrastructure.csproj|solutionrelative:src\\users-service.infrastructure\\serviceinfrastructure\\activityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A260871-B7D0-4B7A-829E-EA4C67E73E97}|tests\\users-service.application.Tests\\users-service.application.Tests.csproj|c:\\users\\adbla\\documents\\github\\users-service\\tests\\users-service.application.tests\\commands\\handlers\\createuserhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A260871-B7D0-4B7A-829E-EA4C67E73E97}|tests\\users-service.application.Tests\\users-service.application.Tests.csproj|solutionrelative:tests\\users-service.application.tests\\commands\\handlers\\createuserhandlertests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{58315267-98D3-7184-BC79-4A050AFBE44F}|src\\users-service.api\\users-service.api.csproj|c:\\users\\adbla\\documents\\github\\users-service\\src\\users-service.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58315267-98D3-7184-BC79-4A050AFBE44F}|src\\users-service.api\\users-service.api.csproj|solutionrelative:src\\users-service.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:docker-compose.yml||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.api.Tests\\Controllers\\UserControllersTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\users-service.api.Tests\\Controllers\\UserControllersTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3968163C-CC2A-03F7-7962-81C76797AD99}|src\\users-service.infrastructure\\users-service.infrastructure.csproj|c:\\users\\adbla\\documents\\github\\users-service\\src\\users-service.infrastructure\\serviceinfrastructure\\keycloakserviceinfrastracture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3968163C-CC2A-03F7-7962-81C76797AD99}|src\\users-service.infrastructure\\users-service.infrastructure.csproj|solutionrelative:src\\users-service.infrastructure\\serviceinfrastructure\\keycloakserviceinfrastracture.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,75 +36,88 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
+          "DockedWidth": 177,
           "SelectedChildIndex": 5,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CreateUserHandlerTests.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs",
-              "RelativeDocumentMoniker": "tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs",
-              "RelativeToolTip": "tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAgwCMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-21T20:41:19.227Z",
-              "IsPinned": true
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserControllersTests.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.api.Tests\\Controllers\\UserControllersTests.cs",
-              "RelativeDocumentMoniker": "tests\\users-service.api.Tests\\Controllers\\UserControllersTests.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.api.Tests\\Controllers\\UserControllersTests.cs",
-              "RelativeToolTip": "tests\\users-service.api.Tests\\Controllers\\UserControllersTests.cs",
-              "ViewState": "AgIAACoAAAAAAAAAAAAgwGIBAABgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T18:20:55.486Z",
-              "IsPinned": true
-            },
-            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IKeycloakServiceInfrastructure.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
-              "RelativeDocumentMoniker": "src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
-              "RelativeToolTip": "src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T01:33:10.558Z"
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ActivityServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\ActivityServiceTest.cs",
+              "RelativeDocumentMoniker": "tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\ActivityServiceTest.cs",
+              "ToolTip": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\ActivityServiceTest.cs",
+              "RelativeToolTip": "tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\ActivityServiceTest.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAwwGoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T01:18:57.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ActivityService.cs",
+              "DocumentMoniker": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\ActivityService.cs",
+              "RelativeDocumentMoniker": "src\\users-service.infrastructure\\ServiceInfrastructure\\ActivityService.cs",
+              "ToolTip": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\ActivityService.cs",
+              "RelativeToolTip": "src\\users-service.infrastructure\\ServiceInfrastructure\\ActivityService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T01:18:31.082Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CreateUserHandlerTests.cs",
+              "DocumentMoniker": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs",
+              "RelativeDocumentMoniker": "tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs",
+              "ToolTip": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs",
+              "RelativeToolTip": "tests\\users-service.application.Tests\\Commands\\Handlers\\CreateUserHandlerTests.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-16T01:16:03.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\src\\users-service.api\\Program.cs",
               "RelativeDocumentMoniker": "src\\users-service.api\\Program.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.api\\Program.cs",
+              "ToolTip": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\src\\users-service.api\\Program.cs",
               "RelativeToolTip": "src\\users-service.api\\Program.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAACsAAAApAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACsAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-24T01:23:10.443Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "KeycloakServiceInfrastracture.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
+              "DocumentMoniker": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
               "RelativeDocumentMoniker": "src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
+              "ToolTip": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
               "RelativeToolTip": "src\\users-service.infrastructure\\ServiceInfrastructure\\KeycloakServiceInfrastracture.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -113,27 +125,51 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "IKeycloakServiceInfrastructure.cs",
+              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\..\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
+              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
+              "RelativeToolTip": "..\\..\\..\\..\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\src\\users-service.domain\\Interfaces\\IKeycloakServiceInfrastructure.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-24T01:33:10.558Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "docker-compose.yml",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\docker-compose.yml",
+              "DocumentMoniker": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\docker-compose.yml",
               "RelativeDocumentMoniker": "docker-compose.yml",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\docker-compose.yml",
+              "ToolTip": "C:\\Users\\ADBLA\\Documents\\GitHub\\users-service\\docker-compose.yml",
               "RelativeToolTip": "docker-compose.yml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003775|",
               "WhenOpened": "2025-11-24T01:29:21.506Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 114,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{da1e233c-cfa8-5021-b06c-abc3d02f44e8}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 160,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "KeycloakServiceInfrastructureTests.cs",
-              "DocumentMoniker": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
-              "RelativeDocumentMoniker": "tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
-              "ToolTip": "C:\\Users\\Crismary Gonzalez\\Documents\\GitHub\\users-service\\tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
-              "RelativeToolTip": "tests\\users-service.infrastructure.Tests\\ServiceInfrastructure\\KeycloakServiceInfrastructureTests.cs",
-              "ViewState": "AgIAAA8DAAAAAAAAAAAAABgDAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T22:18:05.281Z"
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
             }
           ]
         }
