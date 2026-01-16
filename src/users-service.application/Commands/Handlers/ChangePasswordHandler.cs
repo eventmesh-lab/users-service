@@ -1,8 +1,7 @@
 ﻿using users_service.application.Commands.Commands;
 using users_service.application.DTOs.DTOResponse;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.domain.Entities;
-using users_service.application.Services;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -18,18 +17,20 @@ namespace users_service.application.Commands.Handlers
         public readonly IMediator _mediator;
         public readonly IUserServices _userServices;
         public readonly IKeycloakRepository _usuarioKeycloakRepository;
+        private readonly IActivityService _activityService;
 
         /// Inicializa una nueva instancia del handler.
-        public ChangePasswordHandler(IUserServices userServices, IKeycloakRepository usuarioKeycloakRepository)
+        public ChangePasswordHandler(IUserServices userServices,IActivityService activityService, IKeycloakRepository usuarioKeycloakRepository)
         {
             _userServices = userServices;
             _usuarioKeycloakRepository = usuarioKeycloakRepository;
+            _activityService = activityService;
         }
         /// Maneja el comando CrearEventoCommand.
         public async Task<bool> Handle(ChangePasswordCommand request, CancellationToken cancellationToken)
         {
             // Validar si el usuario existe
-            var user = await _userServices.GetUserByEmailServices(request.Email, cancellationToken);
+            var user = await _userServices.GetUserByEmail(request.Email, cancellationToken);
             if (user == null)
             {
                 throw new ApplicationException($"El usuario {request.Email} no existe en la base de datos.");
@@ -39,6 +40,11 @@ namespace users_service.application.Commands.Handlers
                 var userId = await _usuarioKeycloakRepository.GetUserIdByUsernameAsyncRepo(request.Email);
                 Console.WriteLine($"UserId obtenido de Keycloak: {userId}");
                 await _usuarioKeycloakRepository.ChangePasswordAsyncRepo(request.Email, request.ChangePasswordDto.NewPassword);
+                await _activityService.RegisterActivityAsync(
+                    email: request.Email,
+                    action: $"Cambio de contraseña registrado",
+                    category: "Seguridad"
+                );
                 return true;
             }
             catch (Exception ex)

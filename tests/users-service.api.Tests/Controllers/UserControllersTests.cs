@@ -10,7 +10,7 @@ using users_service.api.Controllers;
 using users_service.application.Commands.Commands;
 using users_service.application.DTOs;
 using users_service.application.DTOs.DTOResponse;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.application.Queries.Queries;
 using users_service.domain.Exceptions;
 using Xunit;

@@ -45,7 +45,7 @@ namespace users_service.infrastructure.Tests.Persistence.Repositories
             var token = CancellationToken.None;
 
             // Act
-            await repo.AddUser(user, token);
+            await repo.AddUserPostgres(user, token);
 
             // Assert
             var savedUser = await context.Users.FirstOrDefaultAsync();
@@ -79,7 +79,7 @@ namespace users_service.infrastructure.Tests.Persistence.Repositories
 
             // Act & Assert
             await Assert.ThrowsAsync<TaskCanceledException>(
-                () => repo.AddUser(user, token));
+                () => repo.AddUserPostgres(user, token));
         }
 
         [Fact]

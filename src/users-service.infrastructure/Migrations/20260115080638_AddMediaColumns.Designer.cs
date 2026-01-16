@@ -12,8 +12,8 @@ using users_service.infrastructure.Persistence.Context;
 namespace usersservice.infrastructure.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20251119030950_Inicial")]
-    partial class Inicial
+    [Migration("20260115080638_AddMediaColumns")]
+    partial class AddMediaColumns
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

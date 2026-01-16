@@ -1,5 +1,5 @@
 ﻿using users_service.application.DTOs.DTOResponse;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.application.Mappers;
 using users_service.application.Queries.Queries;
 using MediatR;
@@ -23,7 +23,7 @@ namespace users_service.application.Queries.Handlers
         /// Maneja el comando GetUserEmailQuery.
         public async Task<GetUserResponseDto> Handle(GetUserEmailQuery request, CancellationToken cancellationToken)
         {
-            var userRegistered = await _userServices.GetUserByEmailServices(request.Email, cancellationToken);
+            var userRegistered = await _userServices.GetUserByEmail(request.Email, cancellationToken);
 
             if ( userRegistered == null)
             {

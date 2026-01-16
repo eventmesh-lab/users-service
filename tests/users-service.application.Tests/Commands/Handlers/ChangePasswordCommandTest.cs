@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using users_service.application.Commands.Commands;
 using users_service.application.Commands.Handlers;
 using users_service.application.DTOs;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.domain.Entities;
 
 namespace users_service.application.Tests.Commands.Handlers
@@ -29,7 +29,7 @@ namespace users_service.application.Tests.Commands.Handlers
         [Fact]
         public async Task Handle_ShouldThrow_WhenUserNotExists()
         {
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(command.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(command.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync((User)null);
 
             var ex = await Assert.ThrowsAsync<ApplicationException>(() => _handler.Handle(command, CancellationToken.None));
@@ -38,7 +38,7 @@ namespace users_service.application.Tests.Commands.Handlers
         [Fact]
         public async Task Handle_ShouldThrow_WhenPasswordCannotBeUpdated()
         {
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(command.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(command.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new User());
             _keycloakRepoMock.Setup(s => s.ChangePasswordAsyncRepo(command.Email, command.ChangePasswordDto.NewPassword))
                 .ThrowsAsync(new Exception("DB error"));
@@ -49,7 +49,7 @@ namespace users_service.application.Tests.Commands.Handlers
         [Fact]
         public async Task Handle_True_Success()
         {
-            _userServicesMock.Setup(s => s.GetUserByEmailServices(command.Email, It.IsAny<CancellationToken>()))
+            _userServicesMock.Setup(s => s.GetUserByEmail(command.Email, It.IsAny<CancellationToken>()))
                 .ReturnsAsync(new User());
             _keycloakRepoMock.Setup(s => s.ChangePasswordAsyncRepo(command.Email, command.ChangePasswordDto.NewPassword))
                 .Returns(Task.CompletedTask);

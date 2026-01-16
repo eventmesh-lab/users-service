@@ -1,6 +1,6 @@
 ﻿using users_service.application.Commands.Commands;
 using users_service.application.DTOs;
-using users_service.application.Interfaces;
+using users_service.domain.Interfaces;
 using users_service.application.Queries.Handlers;
 using users_service.application.Queries.Queries;
 using users_service.application.Validator;
@@ -137,6 +137,19 @@ namespace users_service.api.Controllers
             Console.WriteLine("Llegó al controlador");
 
             var command = new GetUsersQuery();
+            var response = await _mediator.Send(command, cancellationToken);
+            return Ok(response);
+        }
+
+        [HttpGet("getIdUser/{email}")]
+        public async Task<IActionResult> GetIdUser(string email, CancellationToken cancellationToken)
+        {
+            if (email == null || string.IsNullOrWhiteSpace(email))
+            {
+                throw new Exception("El email no puede estar vacío.");
+            }
+
+            var command = new GetIdByEmailQuery(email);
             var response = await _mediator.Send(command, cancellationToken);
             return Ok(response);
         }
