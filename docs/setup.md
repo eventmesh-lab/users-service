@@ -17,6 +17,8 @@ Guía completa de configuración y despliegue del microservicio de usuarios.
 - **PostgreSQL 16** o superior
 - **Keycloak 26.0** o superior
 
+> **Nota de compatibilidad**: El proyecto ha sido probado con Keycloak 26.0 (ver `docker-compose.yml`). Versiones anteriores de Keycloak pueden requerir ajustes en las URLs de la API Admin. Se recomienda usar la misma versión mayor para evitar incompatibilidades.
+
 ---
 
 ## 🔧 Variables de Entorno

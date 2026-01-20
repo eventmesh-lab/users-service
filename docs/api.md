@@ -514,4 +514,28 @@ curl http://localhost:7181/api/users/getUser/user%2Btest%40example.com
 
 ### Timeout
 
-Los endpoints tienen un timeout por defecto de 30 segundos configurado en ASP.NET Core.
+Los endpoints tienen un timeout por defecto de 30 segundos, que es el valor predeterminado de ASP.NET Core para requests HTTP.
+
+**Configurar timeout personalizado**:
+
+En `Program.cs` o `appsettings.json`:
+```csharp
+// Aumentar timeout global
+builder.WebHost.ConfigureKestrel(options =>
+{
+    options.Limits.KeepAliveTimeout = TimeSpan.FromSeconds(120);
+    options.Limits.RequestHeadersTimeout = TimeSpan.FromSeconds(60);
+});
+```
+
+O por endpoint específico:
+```csharp
+[HttpGet("getUsers")]
+[RequestTimeout(60000)]  // 60 segundos en milisegundos
+public async Task<IActionResult> GetUsers(CancellationToken cancellationToken)
+{
+    // ...
+}
+```
+
+> **Importante**: Para operaciones largas, considere implementar procesamiento asíncrono en background en lugar de aumentar el timeout.
