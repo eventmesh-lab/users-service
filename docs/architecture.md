@@ -275,6 +275,8 @@ dotnet ef migrations add NombreMigracion \
 ### 1. **Hardcoded URLs en KeycloakServiceInfrastracture**
 **Ubicación**: `KeycloakServiceInfrastracture.cs:181, 213, 238`
 
+> Nota: El nombre de la clase tiene un typo (`Infrastracture` en lugar de `Infrastructure`), ver item #6.
+
 ```csharp
 var url = $"http://keycloak:8080/admin/realms/{realm}/users/{userId}/reset-password";
 ```
@@ -364,6 +366,8 @@ namespace MicroservicioUsuarios.Infrastructure.ServicesInfrastracture
 
 ### 6. **Typo en nombre de clase y namespace**
 **Ubicación**: Multiple archivos
+
+> Nota: Estos son los nombres REALES en el código fuente (con el typo incluido).
 
 ```csharp
 KeycloakServiceInfrastracture  // Debería ser "Infrastructure"
