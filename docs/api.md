@@ -281,7 +281,7 @@ Todos los campos son opcionales. Solo se actualizarán los campos proporcionados
 
 ```json
 {
-  "message": "No se pudo actualizar el usuario en keyclaok"
+  "message": "No se pudo actualizar el usuario en keycloak"
 }
 ```
 

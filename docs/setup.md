@@ -489,7 +489,7 @@ dotnet watch --project src/users-service.api --launch-profile Development
 
 **Configurar User Secrets**:
 ```bash
-dotnet user-secrets set "Keycloak:ClientSecret" "PzaioIxlVKVINnJ7VJwCILdBoUlUWB05" \
+dotnet user-secrets set "Keycloak:ClientSecret" "your-development-secret-here" \
   --project src/users-service.api
 ```
 
