@@ -1,4 +1,4 @@
-# API Documentation
+# Documentación de API (API Documentation)
 
 Documentación de los endpoints REST expuestos por el servicio de usuarios.
 

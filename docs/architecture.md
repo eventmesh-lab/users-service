@@ -1,4 +1,4 @@
-# Arquitectura del Servicio
+# Arquitectura del Servicio (Architecture)
 
 Este documento describe la arquitectura interna del microservicio de usuarios, siguiendo los principios de Clean Architecture y Domain-Driven Design (DDD).
 

@@ -1,4 +1,4 @@
-# Setup Guide
+# Guía de Configuración (Setup Guide)
 
 Guía completa de configuración y despliegue del microservicio de usuarios.
 
